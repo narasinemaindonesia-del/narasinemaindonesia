@@ -1,0 +1,815 @@
+/*** 
+
+====================================================================
+   about Section
+====================================================================
+
+***/
+
+.about-section {
+   position: relative;
+   padding: 120px 0;
+   @include media-breakpoint-down(lg){
+      padding: 80px 0;
+   }
+   .shape1 {
+      width: 658px;
+      height: 658px;
+      background: linear-gradient(218.31deg, #FF4B2F 0%, #B51C1D 100%, #FF4B2F 100%);
+      filter: blur(700px);
+      position: absolute;
+      bottom: -400px;
+      right: -200px;
+      z-index: -1;
+      opacity: 0.7;
+      pointer-events: none;
+      @include media-breakpoint-down(md){
+         display: none;
+      }
+   }
+   .shape2 {
+      width: 360px;
+      height: 360px;
+      background: linear-gradient(218.31deg, #FF4B2F 0%, #B51C1D 100%, #FF4B2F 100%);
+      filter: blur(700px);
+      position: absolute;
+      bottom: -200px;
+      left: -200px;
+      z-index: -1;
+      opacity: 0.7;
+      pointer-events: none;
+   }
+   .sec-title {
+      .title{
+         .arrow-shape {
+            max-width: 400px;
+            width: 100%;
+            margin-left: 40px;
+            margin-top: 20px;
+            @media (max-width: 1399.98px) {
+               max-width: 280px;
+               margin-left: 10px;
+            }
+            @include media-breakpoint-down(xl){
+               display: none;
+            }
+         }
+      }
+      .theme-btn-one {
+         margin-top: 38px;
+      }
+   }
+   .image {
+      width: 100%;
+      height: 480px;
+      border-radius: 16px;
+      overflow: hidden;
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         border-radius: 16px;
+      }
+   }
+   .experience {
+      height: 480px;
+      max-width: 377px;
+      width: 100%;
+      margin: 0 0 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      background-color: #101010;
+      border-radius: 16px;
+      padding: 28px 30px 35px;
+      @include media-breakpoint-down(md){
+         margin: 20px 0 0 0;
+      }
+      .title {
+         font-weight: 500;
+      }
+      .counter {
+         .count-box {
+            line-height: 1;
+            margin-bottom: 0;
+            font-size: 60px;
+            font-weight: 800;
+            font-family: var(--heading-font-family);
+            color: #E5E5E5;
+            display: flex;
+            align-items: center;
+         }
+         .text {
+            color: #E5E5E5;
+            font-size: 18px;
+            font-weight: 400;
+         }
+      }
+   }
+}
+
+/*** 
+
+====================================================================
+   about Section Two
+====================================================================
+
+***/
+.about-section-two {
+   position: relative;
+   padding: 120px 0;
+   @include media-breakpoint-down(lg){
+      padding: 80px 0;
+   }
+   .shape1 {
+      position: absolute;
+      pointer-events: none;
+      right: 60px;
+      bottom: 30px;
+      z-index: -1;
+      @media (max-width: 1599.98px) {
+         right: 10px;
+      }
+      @include media-breakpoint-down(lg){
+         display: none;
+      }
+   }
+   .image-column {
+      .image {
+         border-radius: 12px;
+         overflow: hidden;
+         width: 100%;
+         height: 100%;
+         @include media-breakpoint-down(xl){
+            height: 400px;
+            margin-bottom: 30px;
+         }
+         img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+      }
+   }
+   .content-column {
+      .title {
+         font-size: 190px;
+         letter-spacing: -8px;
+         font-family: var(--heading-font-family2);
+         font-weight: 600;
+         margin-bottom: 30px;
+         line-height: 142px;
+         @media (max-width: 1699.98px) {
+            font-size: 170px;
+         }
+         @media (max-width: 1599.98px) {
+            font-size: 150px;
+         }
+         @media (max-width: 1399.98px) {
+            font-size: 130px;
+         }
+         @include media-breakpoint-down(xl){
+            margin-bottom: 10px;
+         }
+         @include media-breakpoint-down(md){
+            font-size: 100px;
+             line-height: 1;
+         }
+         @include media-breakpoint-down(sm){
+            font-size: 54px;
+            letter-spacing: -3px;
+         }
+      }
+      .title2 {
+         font-size: 32px;
+         margin-bottom: 46px;
+         @include media-breakpoint-down(md){
+            font-size: 26px;
+         }
+         @include media-breakpoint-down(sm){
+            font-size: 20px;
+         }
+         span{
+            margin-left: 100px;
+            @include media-breakpoint-down(md){
+               margin-left: 50px;
+            }
+         }
+      }
+   }
+   .service-list-box {
+      display: flex;
+      align-items: center;
+      gap: 140px;
+      margin-bottom: 30px;
+      @media (max-width: 1399.98px) {
+         gap: 50px;
+      }
+      @include media-breakpoint-down(md){
+         flex-direction: column;
+         align-items: start;
+         gap: 0;
+      }
+   }
+   .about-service-list {
+      max-width: 290px;
+      width: 100%;
+      li {
+         font-size: 18px;
+         font-weight: 500;
+         color: #fff;
+         line-height: 1;
+         margin-bottom: 16px;
+         i {
+            font-size: 20px;
+            color: var(--theme-color1);
+            margin-right: 12px;
+            @include transition(all 300ms ease);
+         }
+         img {
+            width: 20px;
+            height: 20px;
+            margin-right: 12px;
+         }
+      }
+   }
+}
+
+
+/*** 
+
+====================================================================
+   about Section Three
+====================================================================
+
+***/
+.about-section-three {
+   position: relative;
+   padding: 120px 0;
+   border-bottom: 1px solid #2F2F2F;
+   @include media-breakpoint-down(lg){
+      padding: 80px 0;
+   }
+   .image-column {
+      .inner-column {
+         position: relative;
+         @include media-breakpoint-down(xl){
+            margin-bottom: 50px;
+         }
+         .shape2 {
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            @include media-breakpoint-down(xl){
+               display: none;
+            }
+         }
+      }
+      .image-box {
+         display: flex;
+         align-items: center;
+      }
+      .image1 {
+         position: relative;
+         mask-image: url(../images/resource/about3-mask1.png);
+         mask-size: contain;
+         mask-position: center center;
+         mask-repeat: no-repeat;
+         width: 379px;
+         height: 379px;
+         img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+      }
+      .image2 {
+         position: relative;
+         mask-image: url(../images/resource/about3-mask2.png);
+         mask-size: contain;
+         mask-position: center center;
+         mask-repeat: no-repeat;
+         width: 189px;
+         height: 380px;
+         img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+      }
+   }
+   .content-column {
+      .inner-column {
+         position: relative;
+         .title2 {
+            font-size: 60px;
+            font-weight: 500;
+            line-height: 70px;
+            @include media-breakpoint-down(md){
+               font-size: 40px;
+               line-height: 50px;
+            }
+         }
+         .bottom-box {
+            display: flex;
+            align-items: center;
+            margin-top: 85px;
+            @include media-breakpoint-down(md){
+               margin-top: 50px;
+            }
+            @include media-breakpoint-down(sm){
+               flex-direction: column;
+               align-items: start;
+            }
+         }
+         .funfact-box {
+            .inner-box {
+               position: relative;
+               min-width: 245px;
+               width: 100%;
+               @media (max-width: 1399.98px) {
+                  min-width: 219px;
+               }
+               .shape1 {
+                  position: absolute;
+                  top: -25px;
+                  left: -70px;
+                  pointer-events: none;
+                  @include media-breakpoint-down(sm){
+                     display: none;
+                  }
+               }
+               .count-box {
+                  font-family: var(--heading-font-family2);
+               }
+               .title {
+                  font-family: var(--heading-font-family2);
+                  margin-top: 10px;
+                  @include media-breakpoint-down(sm){
+                     margin-top: 0;
+                  }
+               }
+            }
+         }
+         .content-box {
+            border-left: 1px solid #2F2F2F;
+            padding-left: 48px;
+            margin-left: 48px;
+            @media (max-width: 1399.98px) {
+               padding-left: 30px;
+               margin-left: 30px;
+            }
+            @include media-breakpoint-down(sm){
+               padding-left: 0;
+               margin-left: 0;
+               border: none;
+               margin-top: 30px;
+            }
+            .text {
+               color: #999;
+               margin-bottom: 60px;
+               @include media-breakpoint-down(sm){
+                  margin-bottom: 30px;
+               }
+            }
+         }
+      }
+   }
+}
+
+
+/*** 
+
+====================================================================
+   about Section Four
+====================================================================
+
+***/
+.about-section-four {
+   position: relative;
+   padding: 120px 0;
+   @include media-breakpoint-down(lg){
+      padding: 80px 0;
+   }
+   .image-column {
+      .inner-column {
+         max-width: 757px;
+         @include media-breakpoint-down(xl){
+            max-width: 100%;
+            margin-bottom: 50px;
+         }
+         .sec-title {
+            margin-bottom: 50px;
+         }
+      }
+      .image {
+         position: relative;
+         width: 100%;
+         height: 100%;
+         overflow: hidden;
+         @include media-breakpoint-down(xl){
+            height: 400px;
+         }
+         img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+      }
+   }
+
+   .content-column {
+      .inner-column {
+         position: relative;
+         margin-left: 33px;
+         margin-top: 30px;
+         @media (max-width: 1399.98px) {
+            margin-top: 0;
+         }
+         @include media-breakpoint-down(md){
+            margin-left: 0;
+         }
+      }
+      .images-box {
+         text-align: -webkit-right;
+         position: relative;
+         .shape1 {
+            position: absolute;
+            left: 170px;
+            top: 50px;
+            @media (max-width: 1399.98px) {
+               left: 0;
+            }
+            @include media-breakpoint-down(sm){
+               display: none;
+            }
+         }
+      }
+      .image2 {
+         width: 269px;
+         height: 244px;
+         overflow: hidden;
+         img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+      }
+      .content-box {
+         border-left: 1px solid #2F2F2F;
+         padding-left: 100px;
+         padding-top: 77px;
+         position: relative;
+         @include media-breakpoint-down(md){
+            padding-left: 50px;
+         }
+         @include media-breakpoint-down(sm){
+            padding-left: 20px;
+            padding-top: 20px;
+         }
+         &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 1px;
+            width: 389px;
+            background-color: #2F2F2F;
+         }
+         .text {
+            max-width: 519px;
+            margin-top: 20px;
+         }
+         .bottom-box {
+            margin-top: 60px;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            @include media-breakpoint-down(sm){
+               flex-direction: column;
+               align-items: start;
+               margin-top: 20px;
+            }
+            .line {
+               height: 48px;
+               width: 1px;
+               background-color: #2F2F2F;
+               @include media-breakpoint-down(sm){
+                  display: none;
+               }
+            }
+         }
+      }
+      .funfact-box {
+         .inner-box {
+            position: relative;
+            min-width: 245px;
+            width: 100%;
+            @media (max-width: 1399.98px) {
+               min-width: 219px;
+            }
+            .shape2 {
+               position: absolute;
+               top: 70px;
+               right: 0;
+               pointer-events: none;
+               @media (max-width: 1399.98px) {
+                  top: 0;
+               }
+               @include media-breakpoint-down(sm){
+                  display: none;
+               }
+            }
+            .count-box {
+               font-family: var(--heading-font-family2);
+            }
+            .title {
+               font-family: var(--heading-font-family2);
+               margin-top: 10px;
+               @include media-breakpoint-down(sm){
+                  margin-top: 0;
+               }
+            }
+         }
+      }
+      .call-info {
+         position: relative;
+         display: flex;
+         align-items: center;
+         gap: 15px;
+         &:hover {
+            .icon {
+               transform: rotate(0);
+            }
+         }
+         .icon {
+            width: 48px;
+            height: 48px;
+            line-height: 48px;
+            text-align: center;
+            border-radius: 50%;
+            border: 1px solid #2F2F2F;
+            display: inline-block;
+            font-size: 16px;
+            color: #fff;
+            transform: rotate(-45deg);
+            @include transition(all 300ms ease);
+         }
+         .info {
+            display: flex;
+            flex-direction: column;
+            .text2 {
+               font-size: 15px;
+               font-weight: 400;
+               line-height: 1;
+               margin-bottom: 10px;
+               margin-top: 0;
+            }
+            .number {
+               font-size: 16px;
+               font-weight: 600;
+               color: #fff;
+               line-height: 1;
+            }
+         }
+      }
+   }
+}
+
+
+/*** 
+
+====================================================================
+   about Section Five
+====================================================================
+
+***/
+.about-section-five {
+   position: relative;
+   padding: 120px 0;
+   @include media-breakpoint-down(lg){
+      padding: 80px 0;
+   }
+   .title-shadow {
+      font-size: 220px;
+      letter-spacing: -0.02em;
+      color: rgba(255, 255, 255, 0.1);
+      text-transform: uppercase;
+      font-weight: 700;
+      font-family: var(--heading-font-family);
+      width: 100%;
+      position: relative;
+      text-align: right;
+      line-height: 1;
+      padding-right: 200px;
+      @media (max-width: 1399.98px) {
+         font-size: 180px;
+      }
+      @include media-breakpoint-down(xl){
+         font-size: 160px;
+         padding-right: 20px;
+      }
+      @include media-breakpoint-down(lg){
+         font-size: 120px;
+      }
+      @include media-breakpoint-down(md){
+         font-size: 100px;
+      }
+   }
+   .shape2 {
+      width: 360px;
+      height: 360px;
+      background: linear-gradient(218.31deg, #FF4B2F 0%, #B51C1D 100%, #FF4B2F 100%);
+      filter: blur(400px);
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+      opacity: 0.7;
+      pointer-events: none;
+   }
+   .image-column {
+      .image-box {
+         @include media-breakpoint-down(xl){
+            margin-bottom: 50px;
+         }
+         .image {
+            width: 100%;
+            height: 100%;
+            max-width: 585px;
+            overflow: hidden;
+            @include media-breakpoint-down(xl){
+               max-width: 100%;
+               height: 400px;
+            }
+            img {
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+            }
+         }
+      }
+   }
+   .content-column {
+      .inner-column {
+         position: relative;
+         .title {
+            max-width: 683px;
+            letter-spacing: normal;
+            font-size: 60px;
+            line-height: 70px;
+            color: rgba(255, 255, 255, 0.87);
+            margin-bottom: 47px;
+            @include media-breakpoint-down(md){
+               font-size: 42px;
+               line-height: 50px;
+            }
+            @include media-breakpoint-down(sm){
+               margin-bottom: 20px;
+            }
+            span {
+               margin-left: 205px;
+            }
+         }
+         .text {
+            color: #9d9d9d;
+            max-width: 527px;
+         }
+      }
+
+      .bottom-box {
+         display: flex;
+         align-items: center;
+         gap: 24px;
+         margin-top: 77px;
+         @include media-breakpoint-down(sm){
+            flex-direction: column;
+            align-items: start;
+            margin-top: 30px;
+         }
+         .line {
+            width: 1px;
+            height: 42px;
+            background-color: #2F2F2F;
+            @include media-breakpoint-down(sm){
+               display: none;
+            }
+         }
+      }
+
+     .info-box {
+         display: flex;
+         align-items: center;
+         gap: 12px;
+         position: relative;
+         @include media-breakpoint-down(md){
+            flex-direction: column;
+         }
+       .text2 {
+         font-size: 20px;
+       }
+       .image-box {
+         margin-left: 20px;
+         display: flex;
+         align-items: center;
+         img {
+           width: 50px;
+           height: 50px;
+           border-radius: 50%;
+           object-fit: cover;
+           border: 1px solid #17101D;
+           margin-left: -20px;
+         }
+         .icon {
+           background-color: var(--theme-color-white);
+           color: #030303;
+           width: 50px;
+           height: 50px;
+           line-height: 48px;
+           text-align: center;
+           border-radius: 50%;
+           object-fit: cover;
+           border: 1px solid #17101D;
+           margin-left: -20px;
+         }
+       }
+       .counter-box {
+         .count-box {
+           line-height: 1;
+           margin-bottom: 0;
+           font-size: 24px;
+         }
+       }
+     }
+   }
+  .circle-container {
+    position: absolute;
+    top: -138px;
+    left: 0;
+    display: inline-block;
+    .logo {
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(255, 255, 255, 0.1);
+      width: 122px;
+      height: 122px;
+      line-height: 122px;
+      text-align: center;
+      border-radius: 50%;
+    }
+    text {
+      outline: 1px solid #2F2F2F;
+      border-radius: 50%;
+      outline-offset: 5px;
+    }
+    .text {
+      font-size: 16px;
+      text-transform: uppercase;
+      fill: #FFFFFF;
+      font-weight: 700;
+      font-family: var(--heading-font-family2);
+    }
+  }
+  .image2 {
+   width: 322px;
+   height: 257px;
+   overflow: hidden;
+   position: absolute;
+   right: 0;
+   bottom: -73px;
+   @media (max-width: 1599.98px) {
+      width: 250px;
+   }
+   @media (max-width: 1399.98px) {
+      display: none;
+   }
+   @include media-breakpoint-down(xl){
+      display: block;
+   }
+   @include media-breakpoint-down(lg){
+      display: none;
+   }
+   img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+  }
+  .shape1 {
+   position: absolute;
+   top: 0;
+   right: 0;
+   @media (max-width: 1399.98px) {
+      display: none;
+   }
+   @include media-breakpoint-down(xl){
+      display: block;
+   }
+   @include media-breakpoint-down(lg){
+      display: none;
+   }
+  }
+}
