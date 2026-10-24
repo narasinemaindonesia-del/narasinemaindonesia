@@ -1,0 +1,118 @@
+/*** 
+
+====================================================================
+Section Title
+====================================================================
+
+***/
+.sec-title {
+  position: relative;
+  margin-bottom: 70px;
+  @include media-breakpoint-down(md){
+    margin-bottom: 30px;
+  }
+  .sub-title {
+    display: inline-flex;
+    align-items: center;
+    font-size: var(--sec-title-subtitle-font-size);
+    line-height: var(--sec-title-subtitle-line-height);
+    font-weight: var(--sec-title-subtitle-font-weight);
+    font-family: var(--sec-title-subtitle-font-family);
+    color: var(--sec-title-subtitle-color);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    background-color: #101010;
+    border-radius: 6px;
+    padding: 8px 16.5px 6px;
+  }
+  &.text-center{
+    .sub-title{
+      justify-content: center;
+    }
+  }
+
+  .title {
+    position: relative;
+    font-size: var(--sec-title-font-size);
+    color: var(--sec-title-color);
+    font-family: var(--sec-title-font-family);
+    font-weight: var(--sec-title-font-weight);
+    line-height: var(--sec-title-title-line-height);
+    margin-bottom: 0;
+    letter-spacing: -0.01em;
+    @include media-breakpoint-down(md){
+      font-size: 40px;
+      line-height: 50px;
+      br {
+        display: none;
+      }
+    }
+    @include media-breakpoint-down(sm){
+      font-size: 36px;
+      line-height: 46px;
+    }
+  }
+
+  .text {
+    margin-top: 43px;
+    @include media-breakpoint-down(sm){
+      margin-top: 20px;
+    }
+  }
+}
+
+.sec-title-h2 {
+  position: relative;
+  margin-bottom: 70px;
+  @include media-breakpoint-down(md){
+    margin-bottom: 30px;
+  }
+  .sub-title {
+    display: inline-flex;
+    align-items: center;
+    font-size: var(--sec-title-subtitle-font-size);
+    line-height: var(--sec-title-subtitle-line-height);
+    font-weight: var(--sec-title-subtitle-font-weight);
+    font-family: var(--sec-title-subtitle-font-family);
+    color: var(--sec-title-subtitle-color);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    background-color: #181818;
+    border-radius: 6px;
+    padding: 8px 16.5px 6px;
+  }
+  &.text-center{
+    .sub-title{
+      justify-content: center;
+    }
+  }
+
+  .title {
+    position: relative;
+    font-size: 40px;
+    color: var(--sec-title-color);
+    font-family: var(--sec-title-font-family);
+    font-weight: var(--sec-title-font-weight);
+    line-height: var(--sec-title-title-line-height);
+    margin-bottom: 0;
+    letter-spacing: -0.01em;
+    @include media-breakpoint-down(md){
+      font-size: 40px;
+      line-height: 50px;
+      br {
+        display: none;
+      }
+    }
+    @include media-breakpoint-down(sm){
+      font-size: 36px;
+      line-height: 46px;
+    }
+  }
+
+  .text {
+    margin-top: 43px;
+    @include media-breakpoint-down(sm){
+      margin-top: 20px;
+    }
+  }
+}

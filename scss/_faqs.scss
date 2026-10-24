@@ -1,0 +1,191 @@
+/*** 
+
+====================================================================
+    FAQ's Section
+====================================================================
+
+***/
+.faqs-section {
+    position: relative;
+    padding: 120px 0;
+    @include media-breakpoint-down(lg){
+        padding: 80px 0;
+    }
+    .shape1 {
+        position: absolute;
+        pointer-events: none;
+        right: 0;
+        bottom: -200px;
+        z-index: -1;
+        @include media-breakpoint-down(xl){
+            display: none;
+        }
+    }
+}
+
+.faqs-section-two {
+    position: relative;
+    padding: 120px 0;
+    overflow: hidden;
+    @include media-breakpoint-down(lg){
+        padding: 80px 0;
+    }
+    .image {
+        max-width: 575px;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        @include media-breakpoint-down(xl){
+            max-width: 100%;
+            margin-bottom: 30px;
+            height: 400px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .shape1 {
+        position: absolute;
+        right: 200px;
+        top: 0;
+        pointer-events: none;
+        @media (max-width: 1399.98px) {
+            display: none;
+        }
+    }
+    .shape2 {
+        width: 500px;
+        height: 300px;
+        background: var(--theme-color1);
+        filter: blur(300px);
+        position: absolute;
+        bottom: -200px;
+        right: 100px;
+        z-index: -1;
+        opacity: 0.6;
+        pointer-events: none;
+    }
+}
+
+.faqs-section-three {
+    position: relative;
+    padding: 120px 0;
+    @include media-breakpoint-down(lg){
+        padding: 80px 0;
+    }
+    .sec-title {
+        max-width: 431px;
+    }
+    .accordion-box2 .block {
+        border-color: #2F2F2F;
+        padding: 34px 37px;
+        @include media-breakpoint-down(sm){
+            padding: 20px;
+        }
+    }
+    .accordion-box2 .block.active-block {
+        border-color: var(--theme-color1);
+    }
+}
+
+.faqs-section-four {
+    position: relative;
+    padding: 120px 0;
+    overflow: hidden;
+    background-color: #101010;
+    @include media-breakpoint-down(lg){
+        padding: 80px 0;
+    }
+    .image-box {
+        max-width: 575px;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        @include media-breakpoint-down(xl){
+            max-width: 100%;
+            margin-bottom: 30px;
+            height: 400px;
+        }
+        .call-info {
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            width: 100%;
+            padding-bottom: 30px;
+            padding-left: 50px;
+            padding-right: 30px;
+            @include media-breakpoint-down(sm){
+                padding: 20px;
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background: linear-gradient(180deg, rgba(3, 3, 3, 0) 0%, #030303 100%);
+                width: 100%;
+                height: 322px;
+                z-index: -1;
+                pointer-events: none;
+            }
+            .icon {
+                display: inline-block;
+                width: 85px;
+                height: 85px;
+                line-height: 85px;
+                text-align: center;
+                background-color: var(--theme-color1);
+                color: #fff;
+                font-size: 30px;
+                @include media-breakpoint-down(sm){
+                    font-size: 20px;
+                    width: 50px;
+                    height: 50px;
+                    line-height: 50px;
+                }
+            }
+            .info {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                .text2 {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #fff;
+                }
+                .number {
+                    font-size: 24px;
+                    font-weight: 700;
+                    color: #fff;
+                    font-family: var(--heading-font-family);
+                }
+            }
+        }
+    }
+    .image {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .shape1 {
+        position: absolute;
+        right: 130px;
+        top: 33px;
+        pointer-events: none;
+        @media (max-width: 1399.98px) {
+            display: none;
+        }
+    }
+}
