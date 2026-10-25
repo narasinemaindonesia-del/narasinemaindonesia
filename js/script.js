@@ -42,20 +42,19 @@ var THEMEMASCOT = {};
     }
   };
 
-	//Hide Loading Box (Preloader)
-	function handlePreloader() {
-		if($('.preloader').length){
-			$('.preloader').delay(200).fadeOut(500);
-		}
-	}
-	$(document).ready(function () {
-    $(".preloader-loaded").addClass("loaded");
-    if ($(".preloader-loaded").hasClass("loaded")) {
-      $("#preloader").delay(750).queue(function () {
+// Hide Narasinema Preloader
+function handlePreloader() {
+    $('.preloader').stop(true, true).fadeOut(200, function () {
         $(this).remove();
-      });
-    }
-  });
+    });
+}
+
+// Hilangkan logo loading maksimal sekitar 1,2 detik
+$(document).ready(function () {
+    setTimeout(function () {
+        handlePreloader();
+    }, 1200);
+});
 
 	//Update Header Style and Scroll to Top
 	function headerStyle() {
@@ -1472,10 +1471,17 @@ var THEMEMASCOT = {};
    When document is loading, do
    ========================================================================== */
 
-	$(window).on('load', function() {
-		handlePreloader();
-		TM_Pricing_Switcher_Smart();
-  	TM_Pricing_Switcher_Btn();
-	});
+$(window).on('load', function() {
+    handlePreloader();
+    TM_Pricing_Switcher_Smart();
+    TM_Pricing_Switcher_Btn();
+});
+
+// Fallback: hide preloader even if some assets load slowly
+$(document).ready(function() {
+    setTimeout(function() {
+        handlePreloader();
+    }, 1200);
+});
 
 })(window.jQuery);
