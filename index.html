@@ -235,20 +235,18 @@ mengubah gagasan menjadi pengalaman visual yang berdampak."</div>
           </div>
           <div class="row">
             <div class="col-lg-8 col-md-6">
-<div class="youtube-thumbnail" id="who-we-are-video">
-    <img
-        src="images/thumbnail/whoweare.PNG"
-        alt="Who We Are - Narasinema Indonesia"
-        loading="lazy"
+<div class="image img-reveal">
+    <video
+        autoplay
+        muted
+        playsinline
+        controls
+        preload="metadata"
+        style="display:block; width:100%; height:auto; min-height:200px; object-fit:cover;"
     >
-
-    <button
-        type="button"
-        class="youtube-play"
-        aria-label="Putar video Who We Are"
-        onclick="document.getElementById('who-we-are-video').innerHTML =
-        '<iframe src=&quot;https://www.youtube-nocookie.com/embed/QCX1Ma6Pp1E?autoplay=1&amp;vq=hd720&quot; title=&quot;Who We Are - Narasinema Indonesia&quot; allow=&quot;autoplay; encrypted-media; picture-in-picture; fullscreen&quot; allowfullscreen></iframe>'"
-    >▶</button>
+        <source src="video/who-we-are.mp4" type="video/mp4">
+        Browser tidak mendukung video ini.
+    </video>
 </div>
             </div>
             <div class="col-lg-4 col-md-6">
@@ -388,7 +386,7 @@ mengubah gagasan menjadi pengalaman visual yang berdampak."</div>
       </div>
 
       <div class="image portfolio-video">
-        <video autoplay muted loop playsinline preload="metadata">
+        <video autoplay muted loop playsinline preload="auto">
           <source src="images/portofolio/golf.mp4" type="video/mp4">
           Browser kamu tidak mendukung video.
         </video>
