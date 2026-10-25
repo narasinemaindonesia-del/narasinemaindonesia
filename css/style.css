@@ -22388,3 +22388,30 @@ Sidebar
         letter-spacing: -1px !important;
     }
 }
+
+/* Perbaikan ukuran teks tampilan HP */
+@media screen and (max-width: 767px) {
+
+    /* Judul utama */
+    h1.title.denge-words {
+        font-size: 34px !important;
+        line-height: 1.15 !important;
+        letter-spacing: -1px !important;
+    }
+
+    /* Tulisan CreativeLab */
+    .style-text.denge-chars {
+        font-size: 36px !important;
+        line-height: 1.1 !important;
+        letter-spacing: -1px !important;
+    }
+
+    /* Creative & Brand Content / Event & Documentation */
+    .banner-section .text,
+    .banner-section p,
+    .banner-section .subtitle,
+    .banner-section .sub-title {
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+    }
+}
