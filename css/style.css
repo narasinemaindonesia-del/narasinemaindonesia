@@ -22372,3 +22372,19 @@ Sidebar
         font-size: 18px;
     }
 }
+/* Ukuran judul utama khusus HP */
+@media (max-width: 767px) {
+    h1.title.denge-words {
+        font-size: 42px !important;
+        line-height: 1.15 !important;
+        letter-spacing: -1px;
+    }
+}
+/* CreativeLab - ukuran khusus HP */
+@media (max-width: 767px) {
+    .style-text.denge-chars {
+        font-size: 48px !important;
+        line-height: 1.1 !important;
+        letter-spacing: -1px !important;
+    }
+}
