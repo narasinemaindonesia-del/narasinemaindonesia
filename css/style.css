@@ -22078,3 +22078,42 @@ Sidebar
   height: 100%;
   object-fit: cover;
 }
+.youtube-thumbnail {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #170B10;
+}
+
+.youtube-thumbnail img,
+.youtube-thumbnail iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.youtube-thumbnail img {
+    object-fit: cover;
+}
+
+.youtube-thumbnail iframe {
+    position: absolute;
+    inset: 0;
+}
+
+.youtube-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 44px;
+    border: 0;
+    border-radius: 12px;
+    background: #8B1E3F;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
