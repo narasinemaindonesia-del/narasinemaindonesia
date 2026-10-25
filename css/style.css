@@ -22303,3 +22303,72 @@ Sidebar
     }
 
 }
+/* WHO WE ARE - RESPONSIVE YOUTUBE PLAYER */
+#who-we-are-video.youtube-thumbnail {
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+    aspect-ratio: 16 / 9 !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+    background: #000;
+}
+
+/* Thumbnail sebelum video diputar */
+#who-we-are-video > img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute !important;
+    inset: 0 !important;
+    object-fit: cover;
+}
+
+/* Tombol play */
+#who-we-are-video > .youtube-play {
+    position: absolute !important;
+    z-index: 2;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 68px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 12px;
+    background: #f00;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Player YouTube setelah diklik */
+#who-we-are-video > iframe {
+    position: absolute !important;
+    inset: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+}
+
+/* Tampilan HP */
+@media (max-width: 767px) {
+    #who-we-are-video.youtube-thumbnail {
+        width: 100% !important;
+        aspect-ratio: 16 / 9 !important;
+    }
+
+    #who-we-are-video > .youtube-play {
+        width: 56px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
