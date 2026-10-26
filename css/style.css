@@ -22677,4 +22677,16 @@ h1.title.denge-words {
         height: auto !important;
     }
 }
+/* Mengecilkan logo N saat loading di HP */
+@media screen and (max-width: 767px) {
+  .preloader:before {
+    width: 180px !important;
+    height: 180px !important;
+    background-size: contain !important;
+  }
 
+  .preloader:after {
+    width: 140px !important;
+    height: 140px !important;
+  }
+}
