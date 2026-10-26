@@ -22434,3 +22434,13 @@ Sidebar
     }
 }
 
+/* Ukuran logo sticky khusus HP */
+@media screen and (max-width: 767px) {
+    .sticky-header .inner-container > .logo img {
+        width: 120px !important;
+        height: auto !important;
+        max-width: 100% !important;
+        object-fit: contain !important;
+    }
+}
+
