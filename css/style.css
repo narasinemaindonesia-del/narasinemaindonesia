@@ -22416,56 +22416,39 @@ Sidebar
     }
 }
 
-/* Mengecilkan sticky box di HP */
+
+/* Header dan logo sticky - khusus HP */
 @media screen and (max-width: 767px) {
+    .sticky-header {
+        height: 90px !important;
+        min-height: 90px !important;
+    }
+
     .sticky-header .inner-container {
-        min-height: 65px !important;
+        height: 90px !important;
+        min-height: 90px !important;
         padding: 8px 15px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
     }
 
-    .sticky-header .logo img {
-        max-height: 40px !important;
-        width: auto !important;
-    }
-
-    .sticky-header .outer-box {
-        transform: scale(0.9);
-        transform-origin: right center;
-    }
-}
-
-/* Perbaikan proporsi logo sticky khusus HP */
-@media screen and (max-width: 767px) {
     .sticky-header .inner-container > .logo {
-        width: 150px !important;
+        width: auto !important;
         height: auto !important;
         flex-shrink: 0 !important;
     }
 
     .sticky-header .inner-container > .logo img {
         display: block !important;
-        width: 120px !important;
-        height: auto !important;
-        max-width: 120px !important;
-        max-height: none !important;
-        aspect-ratio: auto !important;
-        object-fit: contain !important;
-        transform: none !important;
-    }
-}
-
-
-/* Logo sticky HP - kecil dan proporsional */
-@media screen and (max-width: 767px) {
-    .sticky-header .inner-container > .logo img {
-        display: block !important;
         width: 110px !important;
         height: auto !important;
-        max-width: 100% !important;
+        max-width: 110px !important;
         max-height: none !important;
         object-fit: contain !important;
         transform: none !important;
     }
 }
+
 
 
