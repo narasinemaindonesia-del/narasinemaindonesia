@@ -22450,5 +22450,40 @@ Sidebar
     }
 }
 
+/* Mengecilkan teks halaman utama khusus HP */
+@media screen and (max-width: 767px) {
+
+    /* Judul Narasinema Indonesia */
+    h1.title.denge-words {
+        font-size: 30px !important;
+        line-height: 1.15 !important;
+        letter-spacing: -0.5px !important;
+    }
+
+    /* Logo teks CreativeLab / tulisan N jika berupa teks */
+    .style-text.denge-chars {
+        font-size: 32px !important;
+        line-height: 1.1 !important;
+        letter-spacing: -1px !important;
+    }
+
+    /* Creative & Brand Content / Event & Documentation */
+    .banner-section .text,
+    .banner-section p,
+    .banner-section .subtitle,
+    .banner-section .sub-title {
+        font-size: 13px !important;
+        line-height: 1.4 !important;
+    }
+
+    /* Judul besar lainnya */
+    .banner-section h1,
+    .banner-section h2,
+    .banner-section h3 {
+        font-size: 26px !important;
+        line-height: 1.2 !important;
+    }
+}
+
 
 
