@@ -22010,8 +22010,8 @@ Sidebar
     src: url('../fonts/Hansonbold.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
-    
-}/* Font Hansonbold untuk judul utama */
+
+}/* Font Hanson untuk judul utama */
 .title.denge-words {
     font-family: 'Hansonbold', sans-serif !important;
 }
@@ -22609,20 +22609,14 @@ h1.title.denge-words {
 ========================================= */
 
 @media screen and (max-width: 767px) {
-
-    /* Judul Narasinema Indonesia */
-    .banner-section .content-box .title,
     .banner-section h1.title.denge-words {
-    @font-face {
-    font-family: 'Hansonbold';
-    src: url('../fonts/Hansonbold.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-        font-size: 50px !important;
+        font-family: 'Hanson', sans-serif !important;
+        font-size: 30px !important;
         line-height: 1.15 !important;
         letter-spacing: -0.5px !important;
-        color: #ffffff !important;
     }
+}
+        color: #ffffff !important;
 
     /* Daftar layanan: warna seperti desktop */
     .banner-section .content-box .banner-service-list li,
