@@ -22613,7 +22613,11 @@ h1.title.denge-words {
     /* Judul Narasinema Indonesia */
     .banner-section .content-box .title,
     .banner-section h1.title.denge-words {
-        font-family: var(--heading-font-family2) !important;
+    @font-face {
+    font-family: 'Hanson';
+    src: url('../fonts/hanson.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
         font-size: 30px !important;
         line-height: 1.15 !important;
         letter-spacing: -0.5px !important;
