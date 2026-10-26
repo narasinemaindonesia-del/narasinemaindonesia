@@ -22463,7 +22463,7 @@ Sidebar
         max-width: 150px !important;
         max-height: none !important;
         object-fit: contain !important;
-        transform: scaleY(1.4) !important;
+        transform: scaleY(1.8) !important;
         transform-origin: center center !important;
     }
 }
