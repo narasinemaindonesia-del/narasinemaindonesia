@@ -22490,7 +22490,7 @@ Sidebar
 
     /* Judul Narasinema Indonesia */
     h1.title.denge-words {
-        font-size: 22px !important;
+        font-size: 12px !important;
         line-height: 1.2 !important;
         letter-spacing: -0.5px !important;
     }
@@ -22507,7 +22507,7 @@ Sidebar
     .banner-section p,
     .banner-section .subtitle,
     .banner-section .sub-title {
-        font-size: 11px !important;
+        font-size: 6px !important;
         line-height: 1.4 !important;
     }
 
