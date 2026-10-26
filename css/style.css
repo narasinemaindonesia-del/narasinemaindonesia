@@ -22454,3 +22454,17 @@ Sidebar
     }
 }
 
+/* Memperbaiki logo sticky khusus HP */
+@media screen and (max-width: 767px) {
+    .sticky-header .logo img,
+    .sticky-header .inner-container > .logo img {
+        width: 150px !important;
+        height: auto !important;
+        max-width: 150px !important;
+        max-height: none !important;
+        object-fit: contain !important;
+        transform: scaleY(1.4) !important;
+        transform-origin: center center !important;
+    }
+}
+
