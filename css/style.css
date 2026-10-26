@@ -22663,4 +22663,18 @@ h1.title.denge-words {
         object-fit: contain !important;
     }
 }
+/* Mengecilkan logo N di banner HP */
+@media screen and (max-width: 767px) {
+    .banner-section .bg-banner-img {
+        background-size: 35% auto !important;
+        background-repeat: no-repeat !important;
+        background-position: center center !important;
+    }
+
+    .banner-section img[src*="logo.png"] {
+        width: 35px !important;
+        max-width: 35px !important;
+        height: auto !important;
+    }
+}
 
