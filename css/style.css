@@ -22652,12 +22652,12 @@ h1.title.denge-words {
         font-size: 36px !important;
         line-height: 1.4 !important;
         position: relative;
-        top: -150px;
+        top: -130px;
     }
 
     /* CreativeLab */
     .banner-section .bottom-box .style-text.denge-chars {
-        font-size: 160px !important;
+        font-size: 70px !important;
         line-height: 1 !important;
     }
 
@@ -22796,7 +22796,7 @@ h1.title.denge-words {
   .banner-section .content-box .title::before {
     content: "";
     position: absolute;
-    top: -180px;
+    top: -280px;
     left: -50px;
     width: 120px;
     height: 120px;
@@ -22844,6 +22844,90 @@ h1.title.denge-words {
     font-size: 200px !important;
     line-height: 1 !important;
     letter-spacing: -0.04em !important;
+  }
+
+}
+/* ===== HOME BANNER FULL SCREEN HP ===== */
+@media screen and (max-width: 767px) {
+
+    body .banner-section {
+        position: relative !important;
+        width: 100% !important;
+        height: 100vh !important;
+        height: 100dvh !important;
+        min-height: 100vh !important;
+        min-height: 100dvh !important;
+        max-height: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        overflow: hidden !important;
+        box-sizing: border-box !important;
+    }
+
+    body .banner-section .bg-banner-img,
+    body .banner-section .banner-overlay {
+        position: absolute !important;
+        inset: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    body .banner-section .bg-banner-img {
+        background-size: cover !important;
+        background-position: center center !important;
+    }
+
+    body .banner-section .inner-container {
+        position: relative !important;
+        width: 100% !important;
+        height: 100% !important;
+        min-height: 100% !important;
+        max-width: 100% !important;
+        padding: 250px 20px 25px !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    body .banner-section .banner-slide {
+        width: 100% !important;
+        height: 100% !important;
+        min-height: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        box-sizing: border-box !important;
+    }
+
+    body .banner-section .content-box {
+        width: 100% !important;
+    }
+
+    body .banner-section .bottom-box {
+        width: 100% !important;
+        margin-top: auto !important;
+    }
+}
+/* ===== LOGO N DI POJOK KIRI ATAS - HALAMAN INTERNAL HP ===== */
+@media screen and (max-width: 767px) {
+
+  /* About, Services, Projects, Contact */
+  .page-wrapper:has(.page-title) .page-title {
+    position: relative;
+  }
+
+  .page-wrapper:has(.page-title) .page-title::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: 120px;
+    height: 120px;
+    background-image: url("../images/logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 5;
   }
 
 }
