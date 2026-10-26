@@ -22520,5 +22520,44 @@ Sidebar
     }
 }
 
+/* PERBAIKAN UKURAN TEKS BERANDA - KHUSUS HP */
+@media screen and (max-width: 767px) {
+
+    /* Judul Narasinema Indonesia */
+    .banner-section h1 {
+        font-size: 24px !important;
+        line-height: 1.2 !important;
+    }
+
+    /* Creative & Brand Content, Event & Documentation, dan layanan lainnya */
+    .banner-section ul.banner-service-list,
+    .banner-section ul.banner-service-list li,
+    .banner-section ul.banner-service-list li a {
+        font-size: 11px !important;
+        line-height: 1.5 !important;
+    }
+
+    /* CreativeLab */
+    .banner-section .style-text.denge-chars {
+        font-size: 25px !important;
+        line-height: 1.1 !important;
+    }
+
+    /* Better Things Are On Their Way */
+    .banner-section .client-title {
+        font-size: 16px !important;
+        line-height: 1.4 !important;
+    }
+}
+
+/* TES CSS KHUSUS HP */
+@media screen and (max-width: 767px) {
+    .banner-section ul.banner-service-list li a {
+        font-size: 10px !important;
+        color: red !important;
+    }
+}
+
+
 
 
