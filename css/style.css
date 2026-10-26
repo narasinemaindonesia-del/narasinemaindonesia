@@ -22415,3 +22415,22 @@ Sidebar
         line-height: 1.5 !important;
     }
 }
+
+/* Mengecilkan sticky box di HP */
+@media screen and (max-width: 767px) {
+    .sticky-header .inner-container {
+        min-height: 65px !important;
+        padding: 8px 15px !important;
+    }
+
+    .sticky-header .logo img {
+        max-height: 40px !important;
+        width: auto !important;
+    }
+
+    .sticky-header .outer-box {
+        transform: scale(0.9);
+        transform-origin: right center;
+    }
+}
+
