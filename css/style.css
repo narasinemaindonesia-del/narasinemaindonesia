@@ -22614,8 +22614,8 @@ h1.title.denge-words {
     .banner-section .content-box .title,
     .banner-section h1.title.denge-words {
     @font-face {
-    font-family: 'Hanson';
-    src: url('../fonts/hanson.woff2') format('woff2');
+    font-family: 'Hansonbold';
+    src: url('../fonts/Hansonbold.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
         font-size: 30px !important;
