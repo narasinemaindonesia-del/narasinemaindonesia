@@ -22603,4 +22603,49 @@ h1.title.denge-words {
     }
 }
 
+/* =========================================
+   NARASINEMA BANNER - KHUSUS TAMPILAN HP
+   Mengikuti font dan warna desktop
+========================================= */
+
+@media screen and (max-width: 767px) {
+
+    /* Judul Narasinema Indonesia */
+    .banner-section .content-box .title,
+    .banner-section h1.title.denge-words {
+        font-family: var(--heading-font-family2) !important;
+        font-size: 30px !important;
+        line-height: 1.15 !important;
+        letter-spacing: -0.5px !important;
+        color: #ffffff !important;
+    }
+
+    /* Daftar layanan: warna seperti desktop */
+    .banner-section .content-box .banner-service-list li,
+    .banner-section .content-box .banner-service-list li a,
+    .banner-section .content-box .banner-service-list li span,
+    .banner-section .content-box .banner-service-list li a span {
+        font-size: 11px !important;
+        line-height: 1.5 !important;
+        color: #E5E5E5 !important;
+    }
+
+    /* Tombol Discover More */
+    .banner-section .button-box a {
+        font-size: 12px !important;
+    }
+
+    /* Tagline */
+    .banner-section .client-title {
+        font-size: 14px !important;
+        line-height: 1.4 !important;
+    }
+
+    /* CreativeLab */
+    .banner-section .style-text.denge-chars {
+        font-size: 30px !important;
+        line-height: 1.1 !important;
+    }
+}
+
 
