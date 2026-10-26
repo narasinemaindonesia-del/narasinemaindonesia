@@ -22644,6 +22644,15 @@ h1.title.denge-words {
         font-size: 30px !important;
         line-height: 1.1 !important;
     }
+/* Mengecilkan logo N di HP */
+@media screen and (max-width: 767px) {
+    .main-header .logo img,
+    .sticky-header .logo img {
+        width: 35px !important;
+        height: auto !important;
+        max-width: 100% !important;
+        object-fit: contain !important;
+    }
 }
 
 
