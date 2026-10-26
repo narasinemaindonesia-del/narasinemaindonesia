@@ -22006,11 +22006,11 @@ Sidebar
   width: 100%;
 }
 @font-face {
-    font-family: 'Hansonbold';
+    font-family: 'Hanson';
     src: url('../fonts/Hansonbold.woff2') format('woff2');
-    font-weight: 400;
+    font-weight: 700;
     font-style: normal;
-    font-display: swap;
+    
 }/* Font Hansonbold untuk judul utama */
 .title.denge-words {
     font-family: 'Hansonbold', sans-serif !important;
