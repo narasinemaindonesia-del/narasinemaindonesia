@@ -22555,7 +22555,6 @@ h1.title.denge-words {
 @media screen and (max-width: 767px) {
     .banner-section ul.banner-service-list li a {
         font-size: 10px !important;
-        color: red !important;
     }
 }
 /* Mengecilkan daftar layanan khusus tampilan HP */
@@ -22575,6 +22574,33 @@ h1.title.denge-words {
         line-height: 1.5 !important;
     }
 }
+/* Memuat font Hanson */
+@font-face {
+    font-family: 'Hanson';
+    src: url('../fonts/hanson.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 
+/* Perbaikan khusus tampilan HP */
+@media screen and (max-width: 767px) {
+
+    /* Judul Narasinema Indonesia */
+    .banner-section h1.title.denge-words {
+        font-family: 'Hanson', sans-serif !important;
+        font-size: 30px !important;
+        line-height: 1.15 !important;
+        letter-spacing: -0.5px !important;
+    }
+
+    /* Warna tulisan layanan */
+    .banner-section ul.banner-service-list,
+    .banner-section ul.banner-service-list li,
+    .banner-section ul.banner-service-list li a {
+        font-size: 11px !important;
+        line-height: 1.5 !important;
+        color: #ffffff !important;
+    }
+}
 
 
