@@ -22453,12 +22453,13 @@ Sidebar
 /* Mengecilkan teks halaman utama khusus HP */
 @media screen and (max-width: 767px) {
 
-    /* Judul Narasinema Indonesia */
-    h1.title.denge-words {
-        font-size: 30px !important;
-        line-height: 1.15 !important;
-        letter-spacing: -0.5px !important;
-    }
+/* Judul Narasinema Indonesia khusus HP */
+h1.title.denge-words {
+    font-family: 'Hanson', sans-serif !important;
+    font-size: 30px !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.5px !important;
+}
 
     /* Logo teks CreativeLab / tulisan N jika berupa teks */
     .style-text.denge-chars {
