@@ -22557,7 +22557,23 @@ Sidebar
         color: red !important;
     }
 }
+/* Mengecilkan daftar layanan khusus tampilan HP */
+@media screen and (max-width: 767px) {
+    .banner-section ul.banner-service-list {
+        font-size: 11px !important;
+        line-height: 1.5 !important;
+    }
 
+    .banner-section ul.banner-service-list li {
+        font-size: 11px !important;
+        line-height: 1.5 !important;
+    }
+
+    .banner-section ul.banner-service-list li a {
+        font-size: 11px !important;
+        line-height: 1.5 !important;
+    }
+}
 
 
 
