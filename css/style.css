@@ -22657,9 +22657,9 @@ h1.title.denge-words {
 /* Mengecilkan logo N pada banner khusus HP */
 @media screen and (max-width: 767px) {
     .banner-section img[src*="logo.png"] {
-        width: 45px !important;
+        width: 30px !important;
         height: auto !important;
-        max-width: 45px !important;
+        max-width: 30px !important;
         object-fit: contain !important;
     }
 }
