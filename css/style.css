@@ -22931,3 +22931,264 @@ h1.title.denge-words {
   }
 
 }
+/* ===== SELECTED WORK: YOUTUBE THUMBNAILS ===== */
+
+.selected-work-youtube {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #111;
+  cursor: pointer;
+}
+
+.selected-work-youtube > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s ease;
+}
+
+.selected-work-youtube:hover > img {
+  transform: scale(1.04);
+}
+
+/* Tombol Play */
+.selected-work-youtube .selected-work-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 12px;
+  background: #800020;
+  color: #fff;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.selected-work-youtube .selected-work-play span {
+  font-size: 20px;
+  line-height: 1;
+  margin-left: 3px;
+}
+
+.selected-work-youtube .selected-work-play:hover {
+  background: #a0002a;
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+/* Video YouTube setelah thumbnail diklik */
+.selected-work-youtube iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+}
+
+/* Ukuran tombol pada HP */
+@media (max-width: 767px) {
+  .selected-work-youtube .selected-work-play {
+    width: 52px;
+    height: 38px;
+    border-radius: 9px;
+  }
+
+  .selected-work-youtube .selected-work-play span {
+    font-size: 17px;
+  }
+}
+/* FIX: Thumbnail Selected Work selalu terlihat */
+.selected-work-youtube > img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+
+    position: relative;
+    z-index: 1;
+}
+
+/* Efek saat kursor diarahkan ke thumbnail */
+.selected-work-youtube:hover > img {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: scale(1.04) !important;
+}
+
+/* Kotak thumbnail */
+.selected-work-youtube {
+    position: relative;
+    overflow: hidden;
+    background: #111;
+}
+
+/* Tombol play tetap berada di atas thumbnail */
+.selected-work-youtube .selected-work-play {
+    position: absolute;
+    z-index: 3;
+}
+/* FIX THUMBNAIL YOUTUBE SELECTED WORK */
+.project-block .inner-block .selected-work-youtube > img {
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    filter: none !important;
+
+    object-fit: cover !important;
+    z-index: 1;
+}
+
+/* Pastikan thumbnail tetap terlihat saat hover */
+.project-block .inner-block:hover .selected-work-youtube > img {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: scale(1.04) !important;
+    filter: none !important;
+}
+
+/* Ukuran kotak video */
+.selected-work-youtube {
+    position: relative !important;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #111;
+}
+
+/* Tombol play di atas thumbnail */
+.selected-work-youtube .selected-work-play {
+    position: absolute;
+    z-index: 5;
+}
+/* FIX FINAL: THUMBNAIL SELECTED WORK YOUTUBE */
+.project-block .inner-block .image.selected-work-youtube {
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9 !important;
+    overflow: hidden !important;
+    background: #111 !important;
+}
+
+.project-block .inner-block .image.selected-work-youtube img,
+.project-block .inner-block .image.selected-work-youtube img:first-child {
+    position: absolute !important;
+    inset: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    filter: none !important;
+
+    z-index: 1 !important;
+}
+
+.project-block .inner-block .image.selected-work-youtube .selected-work-play {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    z-index: 5 !important;
+    transform: translate(-50%, -50%) !important;
+}
+/* FIX THUMBNAIL SELECTED WORK - NARASINEMA */
+.project-block .inner-block .image.selected-work-youtube img:first-child {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: auto !important;
+    bottom: auto !important;
+
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    transform: none !important;
+    filter: none !important;
+
+    z-index: 1 !important;
+}
+
+/* Thumbnail tetap terlihat saat kursor diarahkan */
+.project-block .inner-block:hover .image.selected-work-youtube img:first-child {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+}
+
+/* Pastikan area video memiliki ukuran yang benar */
+.project-block .inner-block .image.selected-work-youtube {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9 !important;
+    overflow: hidden !important;
+}
+
+/* Tombol play berada di atas thumbnail */
+.project-block .inner-block .image.selected-work-youtube .selected-work-play {
+    z-index: 5 !important;
+}
+/* RESET EFEK ANIMASI PADA THUMBNAIL YOUTUBE */
+.project-block .inner-block .image.selected-work-youtube img,
+.project-block .inner-block .image.selected-work-youtube img:first-child,
+.project-block .inner-block:hover .image.selected-work-youtube img,
+.project-block .inner-block:hover .image.selected-work-youtube img:first-child {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    filter: none !important;
+}
+
+/* Ukuran area thumbnail */
+.project-block .inner-block .image.selected-work-youtube {
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9 !important;
+    overflow: hidden !important;
+}
+
+/* Gambar memenuhi area video */
+.project-block .inner-block .image.selected-work-youtube > img {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    z-index: 1 !important;
+}
+
+/* Tombol play berada di atas gambar */
+.project-block .inner-block .image.selected-work-youtube > .selected-work-play {
+    position: absolute !important;
+    z-index: 10 !important;
+}
