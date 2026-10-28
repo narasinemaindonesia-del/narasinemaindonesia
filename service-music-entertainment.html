@@ -226,9 +226,46 @@
             <!--Start Services Details Content-->
             <div class="col-lg-8">
               <div class="services-details__content">
-                <div class="service-details-image fix">
-                  <img data-speed=".8" src="images/resource/service-details.jpg" alt="Music &amp; Entertainment">
-                </div>
+                
+<!-- YouTube Video Banner: Music & Entertainment -->
+<div id="music-entertainment-video"
+     style="position:relative;display:block;width:100%;aspect-ratio:16/9;height:auto;padding:0;margin:0;overflow:hidden;background:#000;box-sizing:border-box;">
+
+  <img
+    src="images/thumbnail/music.jpg"
+    alt="Music & Entertainment - Narasinema Indonesia"
+    loading="lazy"
+    style="position:absolute;top:0;left:0;display:block;width:100%;height:100%;max-width:none;margin:0;padding:0;object-fit:cover;border:0;"
+  >
+
+  <button
+    id="music-entertainment-play"
+    type="button"
+    aria-label="Putar video Music & Entertainment"
+    style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center;width:72px;height:52px;min-width:72px;padding:0;margin:0;border:0;border-radius:12px;background:#f00;color:#fff;font-size:25px;line-height:1;cursor:pointer;z-index:10;"
+  >▶</button>
+</div>
+
+<script>
+(function () {
+  const container = document.getElementById("music-entertainment-video");
+  const button = document.getElementById("music-entertainment-play");
+  if (!container || !button) return;
+
+  button.addEventListener("click", function () {
+    const iframe = document.createElement("iframe");
+    iframe.src = "https://www.youtube-nocookie.com/embed/HBSnWFYR24Y?autoplay=1";
+    iframe.title = "Music & Entertainment - Narasinema Indonesia";
+    iframe.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+    iframe.allowFullscreen = true;
+    iframe.setAttribute("frameborder", "0");
+    iframe.style.cssText = "position:absolute;top:0;left:0;display:block;width:100%;height:100%;max-width:none;margin:0;padding:0;border:0;box-sizing:border-box;";
+    container.replaceChildren(iframe);
+  });
+})();
+</script>
+<!-- End YouTube Video Banner -->
+
                 <h3 class="mt-4">About Music &amp; Entertainment</h3>
                 <p class="text">Narasinema Indonesia creates video content for artists, musicians, performances, and entertainment projects. We develop the visual approach around the music, performance style, audience, and release goals.</p>
                 <p class="text">Our scope can include official music videos, performance videos, event music content, and artist content. Each project can be planned from concept and production design through filming, editing, and final delivery.</p>

@@ -226,9 +226,111 @@
             <!--Start Services Details Content-->
             <div class="col-lg-8">
               <div class="services-details__content">
-                <div class="service-details-image fix">
-                  <img data-speed=".8" src="images/resource/service-details.jpg" alt="Creative &amp; Brand Content">
-                </div>
+<!-- YouTube Video Banner: Creative & Brand Content -->
+<div id="creative-brand-video"
+     style="
+       position: relative;
+       display: block;
+       width: 100%;
+       aspect-ratio: 16 / 9;
+       height: auto;
+       padding: 0;
+       margin: 0;
+       overflow: hidden;
+       background: #000;
+       box-sizing: border-box;
+     ">
+
+  <!-- Thumbnail -->
+  <img
+    src="images/thumbnail/wardah.jpg"
+    alt="Creative & Brand Content - Narasinema Indonesia"
+    loading="lazy"
+    style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      max-width: none;
+      margin: 0;
+      padding: 0;
+      object-fit: cover;
+      border: 0;
+    "
+  >
+
+  <!-- Play Button -->
+  <button
+    id="creative-brand-play"
+    type="button"
+    aria-label="Putar video Creative & Brand Content"
+    style="
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 72px;
+      height: 52px;
+      min-width: 72px;
+      padding: 0;
+      margin: 0;
+      border: 0;
+      border-radius: 12px;
+      background: #f00;
+      color: #fff;
+      font-size: 25px;
+      line-height: 1;
+      cursor: pointer;
+      z-index: 10;
+    "
+  >▶</button>
+
+</div>
+<!-- End YouTube Video Banner -->
+
+<script>
+(function () {
+  const container = document.getElementById("creative-brand-video");
+  const button = document.getElementById("creative-brand-play");
+
+  if (!container || !button) return;
+
+  button.addEventListener("click", function () {
+    const iframe = document.createElement("iframe");
+
+    iframe.src =
+      "https://www.youtube-nocookie.com/embed/IHAf1vhyXD0?autoplay=1";
+
+    iframe.title = "Creative & Brand Content - Narasinema Indonesia";
+    iframe.allow =
+      "autoplay; encrypted-media; picture-in-picture; fullscreen";
+    iframe.allowFullscreen = true;
+    iframe.setAttribute("frameborder", "0");
+
+    iframe.style.cssText = `
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      max-width: none;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      box-sizing: border-box;
+    `;
+
+    container.replaceChildren(iframe);
+  });
+})();
+</script>
+<!-- End YouTube Video Banner -->
                 <h3 class="mt-4">About Creative &amp; Brand Content</h3>
                 <p class="text">Narasinema Indonesia develops creative video content that helps brands communicate their story, introduce their products, and build stronger connections with their audiences.</p>
                 <p class="text">Our services include company profile videos, commercial videos, brand films, campaign videos, product videos, and social media content. We work with you to shape the concept, visual direction, production approach, and final deliverables.</p>
