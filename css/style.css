@@ -23192,3 +23192,41 @@ h1.title.denge-words {
     position: absolute !important;
     z-index: 10 !important;
 }
+/* NARASINEMA - FOOTER SOCIAL ICONS HORIZONTAL */
+.social-icon ul {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 24px !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.social-icon ul li {
+    display: inline-flex !important;
+    flex: 0 0 auto !important;
+    float: none !important;
+    width: auto !important;
+    clear: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.social-icon ul li a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: auto !important;
+    margin: 0 !important;
+}
+
+.social-icon ul li a i,
+.social-icon ul li a svg {
+    display: block !important;
+    font-size: 20px !important;
+    width: 20px !important;
+    height: 20px !important;
+}
