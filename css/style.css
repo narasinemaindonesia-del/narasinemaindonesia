@@ -23307,38 +23307,3 @@ html body header.main-header .sticky-header {
     }
 
 }
-/* ==========================================
-   MATIKAN ANIMASI TEKS KHUSUS HALAMAN HOME
-   BERLAKU DESKTOP DAN MOBILE
-========================================== */
-
-body:has(.banner-section) :is(
-  .text-reveal-anim,
-  .text-reveal-anim2,
-  .denge-words,
-  .denge-chars,
-  .denge-fade,
-  .char-animation,
-  .get-in-text,
-  .scroll-text .text1,
-  .scroll-text .text2
-),
-body:has(.banner-section) :is(
-  .text-reveal-anim,
-  .text-reveal-anim2,
-  .denge-words,
-  .denge-chars,
-  .denge-fade,
-  .char-animation,
-  .get-in-text,
-  .scroll-text .text1,
-  .scroll-text .text2
-) * {
-  animation: none !important;
-  transition: none !important;
-  transform: none !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  clip-path: none !important;
-  filter: none !important;
-}
