@@ -827,36 +827,47 @@ if (
 		
 	
 	
-	// Section Title Animation
-    if ($('.char-animation').length > 0) {
-      let char_come = gsap.utils.toArray(".char-animation");
-      char_come.forEach(splitTextLine => {
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: splitTextLine,
-            start: 'top 90%',
-            end: 'bottom 60%',
-            scrub: false,
-            markers: false,
-            toggleActions: 'play none none none'
+// Section Title Animation
+// Nonaktifkan hanya pada Home versi HP
 
-          }
-        });
+if (
+  $('.char-animation').length > 0 &&
+  !(
+    document.querySelector(".banner-section") &&
+    window.matchMedia("(max-width: 767px)").matches
+  )
+) {
+  let char_come = gsap.utils.toArray(".char-animation");
 
-        const itemSplitted = new SplitText(splitTextLine, { type: "chars, words" });
-        gsap.set(splitTextLine, { perspective: 300 });
-        itemSplitted.split({ type: "chars, words" })
-        tl.from(itemSplitted.chars,
-          {
-            duration: 1,
-            delay: 0.5,
-            x: 100,
-            autoAlpha: 0,
-            stagger: 0.05
-          });
-      });
-    }
+  char_come.forEach(splitTextLine => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: splitTextLine,
+        start: "top 90%",
+        end: "bottom 60%",
+        scrub: false,
+        markers: false,
+        toggleActions: "play none none none"
+      }
+    });
 
+    const itemSplitted = new SplitText(splitTextLine, {
+      type: "chars, words"
+    });
+
+    gsap.set(splitTextLine, { perspective: 300 });
+
+    itemSplitted.split({ type: "chars, words" });
+
+    tl.from(itemSplitted.chars, {
+      duration: 1,
+      delay: .5,
+      x: 100,
+      autoAlpha: 0,
+      stagger: .05
+    });
+  });
+}
 
 	//>> Footer Instagram Slider Start <<//
 	if($('.footer-instagram-slider').length > 0) {
