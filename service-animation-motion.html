@@ -187,20 +187,70 @@
   <div id="smooth-wrapper">
     <div id="smooth-content">
 
-      <!-- Start main-content -->
-      <section class="page-title">
-        <div class="bg bg-video"><video autoplay muted loop playsinline><source src="images/resource/bg-video1.mp4" type="video/mp4"></video></div>
-        <div class="container">
-          <div class="title-outer text-center">
-            <h1 class="title">Animation &amp; Motion Graphics</h1>
-            <ul class="page-breadcrumb">
-              <li><a href="index.html">Home</a></li>
-              <li>Animation &amp; Motion Graphics</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <!-- end main-content -->
+
+<!-- Start main-content -->
+<section class="page-title" style="
+  position: relative;
+  height: 286px !important;
+  min-height: 435px !important;
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+">
+
+  <!-- Background Video -->
+  <div class="bg bg-video" style="
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  ">
+
+    <video autoplay muted loop playsinline style="
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    ">
+      <source src="images/resource/bg-video1.mp4" type="video/mp4">
+    </video>
+
+    <!-- Red Overlay -->
+    <div style="
+      position: absolute;
+      inset: 0;
+      background-color: #FF0000;
+      mix-blend-mode: multiply;
+      z-index: 1;
+      pointer-events: none;
+    "></div>
+
+  </div>
+
+  <!-- Header Title -->
+  <div class="container" style="position: relative; z-index: 2;">
+    <div class="title-outer text-center" style="
+      padding: 0;
+      margin: 0;
+      transform: translateY(75px);
+    ">
+
+      <h1 class="title">Animation and Motion Graphics</h1>
+
+      <ul class="page-breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li>Animation and Motion Graphics</li>
+      </ul>
+
+    </div>
+  </div>
+
+</section>
+<!-- end main-content -->
+
 
       <!--Start Services Details-->
       <section class="services-details pt-120 pb-80">

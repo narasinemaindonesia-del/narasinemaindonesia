@@ -198,36 +198,40 @@
   align-items: center;
   overflow: hidden;
 ">
-  <div class="bg bg-video" style="
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  ">
-  <!-- Red video overlay -->
-<div style="
+<div class="bg bg-video" style="
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  background: rgba(10, 0, 15, 0.65);
-  z-index: 1;
-  pointer-events: none;
-"></div>
-    <video autoplay muted loop playsinline style="
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    ">
-      <source src="images/resource/bg-video1.mp4" type="video/mp4">
-    </video>
-  </div>
+  overflow: hidden;
+">
+  <video autoplay muted loop playsinline style="
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  ">
+    <source src="images/resource/bg-video1.mp4" type="video/mp4">
+  </video>
+
+  <!-- Red overlay -->
+  <div style="
+    position: absolute;
+    inset: 0;
+    background-color: #FF0000;
+    mix-blend-mode: multiply;
+    z-index: 1;
+    pointer-events: none;
+  "></div>
+</div>
 
   <div class="container" style="position: relative; z-index: 2;">
-    <div class="title-outer text-center" style="padding: 0; margin: 0;">
+    <div class="title-outer text-center" style="
+  padding: 0;
+  margin: 0;
+  transform: translateY(75px);
+">
       <h1 class="title">About Us</h1>
       <ul class="page-breadcrumb">
         <li><a href="index.html">Home</a></li>
