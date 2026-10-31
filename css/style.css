@@ -23441,3 +23441,37 @@ html body header.main-header .sticky-header {
   }
 
 }
+/* =========================================
+   KOREKSI POSISI JUDUL PROJECT DETAILS - HP
+   ========================================= */
+
+@media screen and (max-width: 767px) {
+
+  /* Posisi judul kategori */
+  .page-title #category-heading {
+    transform: translateY(0px) !important;
+  }
+
+}
+/* =========================================
+   PROJECT DETAILS - PENGATURAN TEKS BANNER HP
+   ========================================= */
+
+@media screen and (max-width: 767px) {
+
+  /* 1. JUDUL KATEGORI */
+  .page-title #category-heading {
+    font-size: 25px !important;       /* Ukuran teks */
+    line-height: 1.2 !important;      /* Jarak antarbaris */
+    transform: translateY(0px) !important; /* Posisi atas/bawah */
+    margin-bottom: 15px !important;   /* Jarak ke breadcrumb */
+  }
+
+  /* 2. BREADCRUMB */
+  .page-title .page-breadcrumb {
+    font-size: 13px !important;       /* Ukuran teks */
+    transform: translateY(0px) !important; /* Posisi atas/bawah */
+    margin-top: 0px !important;
+  }
+
+}
