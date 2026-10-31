@@ -23461,7 +23461,7 @@ html body header.main-header .sticky-header {
 
   /* 1. JUDUL KATEGORI */
   .page-title #category-heading {
-    font-size: 25px !important;       /* Ukuran teks */
+    font-size: 30px !important;       /* Ukuran teks */
     line-height: 1.2 !important;      /* Jarak antarbaris */
     transform: translateY(0px) !important; /* Posisi atas/bawah */
     margin-bottom: 15px !important;   /* Jarak ke breadcrumb */
@@ -23469,7 +23469,7 @@ html body header.main-header .sticky-header {
 
   /* 2. BREADCRUMB */
   .page-title .page-breadcrumb {
-    font-size: 13px !important;       /* Ukuran teks */
+    font-size: 3px !important;       /* Ukuran teks */
     transform: translateY(0px) !important; /* Posisi atas/bawah */
     margin-top: 0px !important;
   }
