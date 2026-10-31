@@ -23307,3 +23307,20 @@ html body header.main-header .sticky-header {
     }
 
 }
+
+/* ===== TEST 1: MATIKAN ANIMASI BACKGROUND BANNER HP ===== */
+@media screen and (max-width: 767px) {
+
+  .banner-section .bg-banner-img,
+  .banner-section .banner-overlay {
+    animation: none !important;
+    -webkit-animation: none !important;
+  }
+
+  .banner-section .bg-banner-img {
+    transform: none !important;
+    -webkit-transform: none !important;
+    will-change: auto !important;
+  }
+
+}
