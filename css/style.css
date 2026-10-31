@@ -22916,27 +22916,6 @@ h1.title.denge-words {
         margin-top: auto !important;
     }
 }
-/* ===== LOGO N DI POJOK KIRI ATAS - HALAMAN INTERNAL HP ===== */
-@media screen and (max-width: 767px) {
-
-  /* About, Services, Projects, Contact */
-  .page-wrapper:has(.page-title) .page-title {
-    position: relative;
-  }
-
-  .page-wrapper:has(.page-title) .page-title::before {
-    content: "";
-    position: absolute;
-    top: -30px;
-    left: -30px;
-    width: 120px;
-    height: 120px;
-    background-image: url("../images/logo.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: 5;
-  }
 
 }
 /* ===== SELECTED WORK: YOUTUBE THUMBNAILS ===== */
@@ -23290,4 +23269,41 @@ html body header.main-header .main-menu .navigation > li > a {
 /* Header saat sticky */
 html body header.main-header .sticky-header {
     background-color: #000000 !important;
+}
+/* =========================================
+   NARASINEMA - FIX LOGO N HEADER MOBILE
+   ========================================= */
+
+@media screen and (max-width: 767px) {
+
+    /* Header sebagai lapisan utama */
+    html body header.main-header.header-style-one {
+        position: relative !important;
+        z-index: 10000 !important;
+        overflow: visible !important;
+    }
+
+    /* Logo N berada di atas kotak hitam */
+    html body header.main-header.header-style-one::before {
+        content: "" !important;
+        position: absolute !important;
+
+        top: 50% !important;
+        left: -40px !important;
+
+        width: 150px !important;
+        height: 150px !important;
+
+        transform: translateY(-50%) !important;
+
+        background-image: url("../images/logo.png") !important;
+        background-size: contain !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+
+        display: block !important;
+        z-index: 999999 !important;
+        pointer-events: none !important;
+    }
+
 }
