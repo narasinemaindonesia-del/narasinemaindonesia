@@ -228,7 +228,154 @@ $(document).ready(function () {
         stagger: 0.1,
       });
 
-    });document.addEventListener("DOMContentLoaded", function () {
+    
+  // TEXT ANIMATION
+  // Desktop: animasi tetap aktif
+  // Mobile: teks tampil normal tanpa efek SplitText
+
+  if (window.matchMedia("(min-width: 768px)").matches) {
+
+    // Text Invert
+    function initTextReveall() {
+      const elements = document.querySelectorAll(".text-reveal-anim");
+
+      elements.forEach(e => {
+        const t = new SplitType(e, { types: "chars" });
+
+        gsap.from(t.chars, {
+          scrollTrigger: {
+            trigger: e,
+            start: "top 75%",
+            end: "top 25%",
+            scrub: true
+          },
+          color: "var(--theme-color1)",
+          stagger: 5,
+          ease: "back.out"
+        });
+      });
+    }
+    initTextReveall();
+
+    // Text Reveal 2
+    function initTextReveal() {
+      const elements = document.querySelectorAll(".text-reveal-anim2");
+
+      elements.forEach(e => {
+        const t = new SplitType(e, { types: "chars" });
+
+        gsap.from(t.chars, {
+          scrollTrigger: {
+            trigger: e,
+            start: "top 75%",
+            end: "top 25%",
+            scrub: true
+          },
+          color: "#FFFFFF99",
+          letterSpacing: "-0.01em",
+          stagger: 0.05,
+          ease: "back.out"
+        });
+      });
+    }
+    initTextReveal();
+
+    // Words Animation
+    let wordsAnimation = gsap.utils.toArray(".denge-words");
+
+    wordsAnimation.forEach(splitWords => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: splitWords,
+          start: "top 90%",
+          end: "bottom 60%",
+          toggleActions: "play none none none"
+        }
+      });
+
+      const textSplitWords = new SplitText(splitWords, { type: "words" });
+
+      gsap.set(splitWords, { perspective: 400 });
+
+      textSplitWords.split({ type: "words" });
+
+      tl.from(textSplitWords.words, {
+        duration: .4,
+        delay: .3,
+        opacity: 0,
+        rotationX: 10,
+        x: 50,
+        force3D: true,
+        transformOrigin: "top center -50",
+        stagger: .1
+      });
+    });
+
+    // Characters Animation
+    let charsAnimation = gsap.utils.toArray(".denge-chars");
+
+    charsAnimation.forEach(splitChars => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: splitChars,
+          start: "top 90%",
+          end: "bottom 60%",
+          toggleActions: "play none none none"
+        }
+      });
+
+      const textSplitChars = new SplitText(splitChars, { type: "chars" });
+
+      gsap.set(splitChars, { perspective: 400 });
+
+      textSplitChars.split({ type: "chars" });
+
+      tl.from(textSplitChars.chars, {
+        duration: .4,
+        opacity: 0,
+        scale: 0,
+        y: 80,
+        rotationX: 100,
+        transformOrigin: "0% 50% -50",
+        ease: "back",
+        stagger: .1
+      });
+    });
+
+    // Section Title Animation
+    if ($(".char-animation").length > 0) {
+      let char_come = gsap.utils.toArray(".char-animation");
+
+      char_come.forEach(splitTextLine => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: splitTextLine,
+            start: "top 90%",
+            end: "bottom 60%",
+            toggleActions: "play none none none"
+          }
+        });
+
+        const itemSplitted = new SplitText(splitTextLine, {
+          type: "chars, words"
+        });
+
+        gsap.set(splitTextLine, { perspective: 300 });
+
+        itemSplitted.split({ type: "chars, words" });
+
+        tl.from(itemSplitted.chars, {
+          duration: 1,
+          delay: .5,
+          x: 100,
+          autoAlpha: 0,
+          stagger: .05
+        });
+      });
+    }
+
+  }
+
       if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
           gsap.registerPlugin(ScrollTrigger);
 
@@ -291,7 +438,18 @@ $(document).ready(function () {
     }
   }
 
-  // ScrollSmoother - using agntix-html approach
+  // ScrollSmoother - Desktop Only
+if (
+  window.matchMedia("(min-width: 768px)").matches &&
+  $('#smooth-wrapper').length &&
+  $('#smooth-content').length &&
+  typeof ScrollSmoother !== "undefined"
+) {
+  ScrollSmoother.create({
+    smooth: 1.35,
+    effects: true
+  });
+}
   if($('#smooth-wrapper').length && $('#smooth-content').length){
     ScrollSmoother.create({
       smooth: 1.35,
