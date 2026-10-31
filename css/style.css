@@ -23324,3 +23324,13 @@ html body header.main-header .sticky-header {
   }
 
 }
+/* ===== FIX HORIZONTAL OVERFLOW HOME PAGE HP ===== */
+@media screen and (max-width: 767px) {
+
+    html:has(.banner-section),
+    body:has(.banner-section) {
+        max-width: 100% !important;
+        overflow-x: clip !important;
+    }
+
+}
