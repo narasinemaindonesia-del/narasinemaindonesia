@@ -94,6 +94,28 @@
   display: flex;
   align-items: center;
 }
+/* Ukuran banner Project Details untuk HP */
+@media screen and (max-width: 767px) {
+  .page-title {
+    height: 300px !important;
+    min-height: 100px !important;
+    max-height: 120px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .page-title .bg,
+  .page-title .bg-video {
+    height: 100% !important;
+  }
+
+  .page-title .bg-video video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+}
 
 .page-title .container {
   width: 100%;

@@ -23369,3 +23369,75 @@ html body header.main-header .sticky-header {
   }
 
 }
+/* =========================================
+   NARASINEMA - ABOUT VIDEO BANNER MOBILE
+   ========================================= */
+
+@media screen and (max-width: 767px) {
+
+  .about-video-banner {
+    height: 300px !important;
+    min-height: 100px !important;
+    max-height: 120px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .about-video-banner .bg-video {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .about-video-banner .bg-video video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+
+  .about-video-banner .title-outer {
+    transform: translateY(25px) !important;
+  }
+
+}
+/* =====================================
+   POSISI TEKS BANNER PROJECT DETAILS - HP
+   ===================================== */
+
+@media screen and (max-width: 767px) {
+
+  .page-title .title-outer {
+    transform: translateY(0px) !important;
+  }
+
+}
+/* =========================================
+   PENGATURAN TEKS BANNER PROJECT DETAILS - HP
+   ========================================= */
+
+@media screen and (max-width: 767px) {
+
+  /* 1. JUDUL BANNER: OUR PORTFOLIO */
+  .page-title #category-heading {
+    font-size: 35px !important;
+    transform: translateY(-25px);
+    margin-bottom: 15px !important;
+    line-height: 1.2 !important;
+  }
+
+  /* 2. BREADCRUMB: HOME / PORTFOLIO / CATEGORY */
+  .page-title .page-breadcrumb {
+    transform: translateY(-10px);
+    font-size: 5px !important;
+    margin-top: 0 !important;
+  }
+
+  /* 3. JARAK ANTARA JUDUL DAN BREADCRUMB */
+  .page-title .title-outer {
+    padding: 0 !important;
+  }
+
+}
