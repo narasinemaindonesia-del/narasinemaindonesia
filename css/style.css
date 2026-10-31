@@ -23361,3 +23361,15 @@ body:has(.banner-section) .about-section .sec-title .title.text-reveal-anim * {
     visibility: visible !important;
     clip-path: none !important;
 }
+/* PAKSA JUDUL OUR STORY TERLIHAT DI HP */
+@media screen and (max-width: 767px) {
+  body:has(.banner-section) .about-section .sec-title .title.text-reveal-anim,
+  body:has(.banner-section) .about-section .sec-title .title.text-reveal-anim * {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    clip-path: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
