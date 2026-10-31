@@ -107,114 +107,82 @@ $(document).ready(function () {
 
   // Text Invert
   function initTextReveall() {
-
-  // Home HP: jangan jalankan SplitType
-  if (
-    document.querySelector(".banner-section") &&
-    window.matchMedia("(max-width: 767px)").matches
-  ) {
-    return;
-  }
-
-  const tagetedElementContainer =
-    document.querySelectorAll(".text-reveal-anim");
-
-  if (tagetedElementContainer?.length) {
-    tagetedElementContainer.forEach(e => {
-      var t = new SplitType(e, { types: "chars" });
-
-      gsap.from(t.chars, {
-        scrollTrigger: {
-          trigger: e,
-          start: "top 75%",
-          end: "top 25%",
-          scrub: true,
-          duration: 0.5
-        },
-        color: "var(--theme-color1)",
-        stagger: 5,
-        ease: "back.out"
+    const tagetedElementContainer =
+      document.querySelectorAll(".text-reveal-anim");
+    if (tagetedElementContainer?.length) {
+      tagetedElementContainer.forEach(e => {
+        var t = new SplitType(e, {
+          types: "chars",
+        });
+        gsap.from(t.chars, {
+          scrollTrigger: {
+            trigger: e,
+            start: "top 75%",
+            end: "top 25%",
+            scrub: !0,
+            duration: 0.5
+          },
+          color: "var(--theme-color1)",
+          stagger: 5,
+          ease: "back.out",
+        });
       });
-    });
+    }
   }
-}
   initTextReveall();
   function initTextReveal() {
-
-  // Home HP: jangan jalankan SplitType
-  if (
-    document.querySelector(".banner-section") &&
-    window.matchMedia("(max-width: 767px)").matches
-  ) {
-    return;
-  }
-
-  const tagetedElementContainer =
-    document.querySelectorAll(".text-reveal-anim2");
-
-  if (tagetedElementContainer?.length) {
-    tagetedElementContainer.forEach(e => {
-      var t = new SplitType(e, { types: "chars" });
-
-      gsap.from(t.chars, {
-        scrollTrigger: {
-          trigger: e,
-          start: "top 75%",
-          end: "top 25%",
-          scrub: true,
-          duration: 0.5
-        },
-        color: "#FFFFFF99",
-        letterSpacing: "-0.01em",
-        stagger: 0.05,
-        ease: "back.out"
+    const tagetedElementContainer =
+      document.querySelectorAll(".text-reveal-anim2");
+    if (tagetedElementContainer?.length) {
+      tagetedElementContainer.forEach(e => {
+        var t = new SplitType(e, {
+          types: "chars",
+        });
+        gsap.from(t.chars, {
+          scrollTrigger: {
+            trigger: e,
+            start: "top 75%",
+            end: "top 25%",
+            scrub: !0,
+            duration: 0.5
+          },
+          color: "#FFFFFF99",
+          letterSpacing: "-0.01em",
+          stagger: 0.05,
+          ease: "back.out",
+        });
       });
-    });
+    }
   }
-}
   initTextReveal();
 
-    // Words Animation
-// Nonaktifkan SplitText hanya pada Home HP
+    // 19. Words Animatoin
+    let wordsAnimation = gsap.utils.toArray(".denge-words");
+    wordsAnimation.forEach((splitWords) => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: splitWords,
+          start: "top 90%",
+          end: "bottom 60%",
+          scrub: false,
+          toggleActions: "play none none none",
+        },
+      });
 
-if (
-  !(
-    document.querySelector(".banner-section") &&
-    window.matchMedia("(max-width: 767px)").matches
-  )
-) {
-  let wordsAnimation = gsap.utils.toArray(".denge-words");
-
-  wordsAnimation.forEach(splitWords => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: splitWords,
-        start: "top 90%",
-        end: "bottom 60%",
-        toggleActions: "play none none none"
-      }
+      const textSplitWords = new SplitText(splitWords, { type: "words" });
+      gsap.set(splitWords, { perspective: 400 });
+      textSplitWords.split({ type: "words" });
+      tl.from(textSplitWords.words, {
+        duration: .4,
+        delay: 0.3,
+        opacity: 0,
+        rotationX: 10,
+        x: 50,
+        force3D: true,
+        transformOrigin: "top center -50",
+        stagger: 0.1,
+      });
     });
-
-    const textSplitWords = new SplitText(splitWords, {
-      type: "words"
-    });
-
-    gsap.set(splitWords, { perspective: 400 });
-
-    textSplitWords.split({ type: "words" });
-
-    tl.from(textSplitWords.words, {
-      duration: .4,
-      delay: .3,
-      opacity: 0,
-      rotationX: 10,
-      x: 50,
-      force3D: true,
-      transformOrigin: "top center -50",
-      stagger: .1
-    });
-  });
-}
 
   // Fade Animation Bottom
   let fade_animation = gsap.utils.toArray(".denge-fade");
@@ -233,47 +201,32 @@ if (
       duration: .4,
     });
   });
-    // Characters Animation
-// Nonaktifkan SplitText hanya pada Home HP
+    // 18. Characters Animatoin
+    let charsAnimation = gsap.utils.toArray(".denge-chars");
+    charsAnimation.forEach((splitChars) => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: splitChars,
+          start: "top 90%",
+          end: "bottom 60%",
+          scrub: false,
+          toggleActions: "play none none none",
+        },
+      });
 
-if (
-  !(
-    document.querySelector(".banner-section") &&
-    window.matchMedia("(max-width: 767px)").matches
-  )
-) {
-  let charsAnimation = gsap.utils.toArray(".denge-chars");
-
-  charsAnimation.forEach(splitChars => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: splitChars,
-        start: "top 90%",
-        end: "bottom 60%",
-        toggleActions: "play none none none"
-      }
-    });
-
-    const textSplitChars = new SplitText(splitChars, {
-      type: "chars"
-    });
-
-    gsap.set(splitChars, { perspective: 400 });
-
-    textSplitChars.split({ type: "chars" });
-
-    tl.from(textSplitChars.chars, {
-      duration: .4,
-      opacity: 0,
-      scale: 0,
-      y: 80,
-      rotationX: 100,
-      transformOrigin: "0% 50% -50",
-      ease: "back",
-      stagger: .1
-    });
-  });
-}
+      const textSplitChars = new SplitText(splitChars, { type: "chars" });
+      gsap.set(splitChars, { perspective: 400 });
+      textSplitChars.split({ type: "chars" });
+      tl.from(textSplitChars.chars, {
+        duration: .4,
+        opacity: 0,
+        scale: 0,
+        y: 80,
+        rotationX: 100,
+        transformOrigin: "0% 50% -50",
+        ease: "back",
+        stagger: 0.1,
+      });
 
     });document.addEventListener("DOMContentLoaded", function () {
       if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
@@ -845,47 +798,36 @@ if (
 		
 	
 	
-// Section Title Animation
-// Nonaktifkan hanya pada Home versi HP
+	// Section Title Animation
+    if ($('.char-animation').length > 0) {
+      let char_come = gsap.utils.toArray(".char-animation");
+      char_come.forEach(splitTextLine => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: splitTextLine,
+            start: 'top 90%',
+            end: 'bottom 60%',
+            scrub: false,
+            markers: false,
+            toggleActions: 'play none none none'
 
-if (
-  $('.char-animation').length > 0 &&
-  !(
-    document.querySelector(".banner-section") &&
-    window.matchMedia("(max-width: 767px)").matches
-  )
-) {
-  let char_come = gsap.utils.toArray(".char-animation");
+          }
+        });
 
-  char_come.forEach(splitTextLine => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: splitTextLine,
-        start: "top 90%",
-        end: "bottom 60%",
-        scrub: false,
-        markers: false,
-        toggleActions: "play none none none"
-      }
-    });
+        const itemSplitted = new SplitText(splitTextLine, { type: "chars, words" });
+        gsap.set(splitTextLine, { perspective: 300 });
+        itemSplitted.split({ type: "chars, words" })
+        tl.from(itemSplitted.chars,
+          {
+            duration: 1,
+            delay: 0.5,
+            x: 100,
+            autoAlpha: 0,
+            stagger: 0.05
+          });
+      });
+    }
 
-    const itemSplitted = new SplitText(splitTextLine, {
-      type: "chars, words"
-    });
-
-    gsap.set(splitTextLine, { perspective: 300 });
-
-    itemSplitted.split({ type: "chars, words" });
-
-    tl.from(itemSplitted.chars, {
-      duration: 1,
-      delay: .5,
-      x: 100,
-      autoAlpha: 0,
-      stagger: .05
-    });
-  });
-}
 
 	//>> Footer Instagram Slider Start <<//
 	if($('.footer-instagram-slider').length > 0) {
@@ -1423,51 +1365,22 @@ if (
 		});
 	}
 
-// Scroll Text Animation
-// Dinonaktifkan khusus Home versi HP
+	document.querySelectorAll(".scroll-text").forEach((section) => {
+		let tl = gsap.timeline({
+			scrollTrigger: {
+			trigger: section,
+			start: "top 100%",
+			end: "bottom top",
+			scrub: 1,
+			markers: false,
+			},
+		});
+		tl.from(section.querySelector(".text1"), { xPercent: 20 })
+		.from(section.querySelector(".text2"), { xPercent: -20 }, 0);
+		tl.from(section.querySelector(".scroll-anim-top"), { yPercent: 10 }, 0)
+		.from(section.querySelector(".scroll-anim-bottom"), { yPercent: -10 }, 0);
+	});
 
-const isHomeMobile =
-  document.querySelector(".banner-section") &&
-  window.matchMedia("(max-width: 767px)").matches;
-
-if (!isHomeMobile) {
-
-  document.querySelectorAll(".scroll-text").forEach((section) => {
-
-    const text1 = section.querySelector(".text1");
-    const text2 = section.querySelector(".text2");
-    const animTop = section.querySelector(".scroll-anim-top");
-    const animBottom = section.querySelector(".scroll-anim-bottom");
-
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: section,
-        start: "top 100%",
-        end: "bottom top",
-        scrub: 1,
-        markers: false
-      }
-    });
-
-    if (text1) {
-      tl.from(text1, { xPercent: 20 });
-    }
-
-    if (text2) {
-      tl.from(text2, { xPercent: -20 }, 0);
-    }
-
-    if (animTop) {
-      tl.from(animTop, { yPercent: 10 }, 0);
-    }
-
-    if (animBottom) {
-      tl.from(animBottom, { yPercent: -10 }, 0);
-    }
-
-  });
-
-}
 	//Bg Parallax
 	if($('.bg-parallax').length){
 		gsap.to(".bg-parallax", {
