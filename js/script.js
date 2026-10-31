@@ -157,7 +157,8 @@ $(document).ready(function () {
   initTextReveal();
 
     // 19. Words Animatoin
-    let wordsAnimation = gsap.utils.toArray(".denge-words");
+    let wordsAnimation = gsap.utils.toArray(".denge-words")
+  .filter(el => !el.closest(".banner-section"));
     wordsAnimation.forEach((splitWords) => {
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -202,7 +203,8 @@ $(document).ready(function () {
     });
   });
     // 18. Characters Animatoin
-    let charsAnimation = gsap.utils.toArray(".denge-chars");
+    let charsAnimation = gsap.utils.toArray(".denge-chars")
+  .filter(el => !el.closest(".banner-section"));
     charsAnimation.forEach((splitChars) => {
       const tl = gsap.timeline({
         scrollTrigger: {
