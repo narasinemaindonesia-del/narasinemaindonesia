@@ -23342,34 +23342,3 @@ body:has(.banner-section) :is(
   clip-path: none !important;
   filter: none !important;
 }
-/* MATIKAN ANIMASI OUR STORY - KHUSUS HOME */
-body:has(.banner-section) .about-section .sec-title .title.text-reveal-anim {
-    animation: none !important;
-    transition: none !important;
-    transform: none !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    clip-path: none !important;
-}
-
-/* Pastikan seluruh teks judul terlihat normal */
-body:has(.banner-section) .about-section .sec-title .title.text-reveal-anim * {
-    animation: none !important;
-    transition: none !important;
-    transform: none !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    clip-path: none !important;
-}
-/* PAKSA JUDUL OUR STORY TERLIHAT DI HP */
-@media screen and (max-width: 767px) {
-  body:has(.banner-section) .about-section .sec-title .title.text-reveal-anim,
-  body:has(.banner-section) .about-section .sec-title .title.text-reveal-anim * {
-    opacity: 1 !important;
-    visibility: visible !important;
-    transform: none !important;
-    clip-path: none !important;
-    animation: none !important;
-    transition: none !important;
-  }
-}
