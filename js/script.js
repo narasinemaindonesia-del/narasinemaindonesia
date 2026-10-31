@@ -156,33 +156,47 @@ $(document).ready(function () {
   }
   initTextReveal();
 
-    // 19. Words Animatoin
-    let wordsAnimation = gsap.utils.toArray(".denge-words");
-    wordsAnimation.forEach((splitWords) => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: splitWords,
-          start: "top 90%",
-          end: "bottom 60%",
-          scrub: false,
-          toggleActions: "play none none none",
-        },
-      });
+    // Words Animation
+// Nonaktifkan SplitText hanya pada Home HP
 
-      const textSplitWords = new SplitText(splitWords, { type: "words" });
-      gsap.set(splitWords, { perspective: 400 });
-      textSplitWords.split({ type: "words" });
-      tl.from(textSplitWords.words, {
-        duration: .4,
-        delay: 0.3,
-        opacity: 0,
-        rotationX: 10,
-        x: 50,
-        force3D: true,
-        transformOrigin: "top center -50",
-        stagger: 0.1,
-      });
+if (
+  !(
+    document.querySelector(".banner-section") &&
+    window.matchMedia("(max-width: 767px)").matches
+  )
+) {
+  let wordsAnimation = gsap.utils.toArray(".denge-words");
+
+  wordsAnimation.forEach(splitWords => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: splitWords,
+        start: "top 90%",
+        end: "bottom 60%",
+        toggleActions: "play none none none"
+      }
     });
+
+    const textSplitWords = new SplitText(splitWords, {
+      type: "words"
+    });
+
+    gsap.set(splitWords, { perspective: 400 });
+
+    textSplitWords.split({ type: "words" });
+
+    tl.from(textSplitWords.words, {
+      duration: .4,
+      delay: .3,
+      opacity: 0,
+      rotationX: 10,
+      x: 50,
+      force3D: true,
+      transformOrigin: "top center -50",
+      stagger: .1
+    });
+  });
+}
 
   // Fade Animation Bottom
   let fade_animation = gsap.utils.toArray(".denge-fade");
@@ -201,181 +215,49 @@ $(document).ready(function () {
       duration: .4,
     });
   });
-    // 18. Characters Animatoin
-    let charsAnimation = gsap.utils.toArray(".denge-chars");
-    charsAnimation.forEach((splitChars) => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: splitChars,
-          start: "top 90%",
-          end: "bottom 60%",
-          scrub: false,
-          toggleActions: "play none none none",
-        },
-      });
-
-      const textSplitChars = new SplitText(splitChars, { type: "chars" });
-      gsap.set(splitChars, { perspective: 400 });
-      textSplitChars.split({ type: "chars" });
-      tl.from(textSplitChars.chars, {
-        duration: .4,
-        opacity: 0,
-        scale: 0,
-        y: 80,
-        rotationX: 100,
-        transformOrigin: "0% 50% -50",
-        ease: "back",
-        stagger: 0.1,
-      });
-
-    
-  // TEXT ANIMATION
-  // Desktop: animasi tetap aktif
-  // Mobile: teks tampil normal tanpa efek SplitText
-
-  if (window.matchMedia("(min-width: 768px)").matches) {
-
-    // Text Invert
-    function initTextReveall() {
-      const elements = document.querySelectorAll(".text-reveal-anim");
-
-      elements.forEach(e => {
-        const t = new SplitType(e, { types: "chars" });
-
-        gsap.from(t.chars, {
-          scrollTrigger: {
-            trigger: e,
-            start: "top 75%",
-            end: "top 25%",
-            scrub: true
-          },
-          color: "var(--theme-color1)",
-          stagger: 5,
-          ease: "back.out"
-        });
-      });
-    }
-    initTextReveall();
-
-    // Text Reveal 2
-    function initTextReveal() {
-      const elements = document.querySelectorAll(".text-reveal-anim2");
-
-      elements.forEach(e => {
-        const t = new SplitType(e, { types: "chars" });
-
-        gsap.from(t.chars, {
-          scrollTrigger: {
-            trigger: e,
-            start: "top 75%",
-            end: "top 25%",
-            scrub: true
-          },
-          color: "#FFFFFF99",
-          letterSpacing: "-0.01em",
-          stagger: 0.05,
-          ease: "back.out"
-        });
-      });
-    }
-    initTextReveal();
-
-    // Words Animation
-    let wordsAnimation = gsap.utils.toArray(".denge-words");
-
-    wordsAnimation.forEach(splitWords => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: splitWords,
-          start: "top 90%",
-          end: "bottom 60%",
-          toggleActions: "play none none none"
-        }
-      });
-
-      const textSplitWords = new SplitText(splitWords, { type: "words" });
-
-      gsap.set(splitWords, { perspective: 400 });
-
-      textSplitWords.split({ type: "words" });
-
-      tl.from(textSplitWords.words, {
-        duration: .4,
-        delay: .3,
-        opacity: 0,
-        rotationX: 10,
-        x: 50,
-        force3D: true,
-        transformOrigin: "top center -50",
-        stagger: .1
-      });
-    });
-
     // Characters Animation
-    let charsAnimation = gsap.utils.toArray(".denge-chars");
+// Nonaktifkan SplitText hanya pada Home HP
 
-    charsAnimation.forEach(splitChars => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: splitChars,
-          start: "top 90%",
-          end: "bottom 60%",
-          toggleActions: "play none none none"
-        }
-      });
+if (
+  !(
+    document.querySelector(".banner-section") &&
+    window.matchMedia("(max-width: 767px)").matches
+  )
+) {
+  let charsAnimation = gsap.utils.toArray(".denge-chars");
 
-      const textSplitChars = new SplitText(splitChars, { type: "chars" });
-
-      gsap.set(splitChars, { perspective: 400 });
-
-      textSplitChars.split({ type: "chars" });
-
-      tl.from(textSplitChars.chars, {
-        duration: .4,
-        opacity: 0,
-        scale: 0,
-        y: 80,
-        rotationX: 100,
-        transformOrigin: "0% 50% -50",
-        ease: "back",
-        stagger: .1
-      });
+  charsAnimation.forEach(splitChars => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: splitChars,
+        start: "top 90%",
+        end: "bottom 60%",
+        toggleActions: "play none none none"
+      }
     });
 
-    // Section Title Animation
-    if ($(".char-animation").length > 0) {
-      let char_come = gsap.utils.toArray(".char-animation");
+    const textSplitChars = new SplitText(splitChars, {
+      type: "chars"
+    });
 
-      char_come.forEach(splitTextLine => {
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: splitTextLine,
-            start: "top 90%",
-            end: "bottom 60%",
-            toggleActions: "play none none none"
-          }
-        });
+    gsap.set(splitChars, { perspective: 400 });
 
-        const itemSplitted = new SplitText(splitTextLine, {
-          type: "chars, words"
-        });
+    textSplitChars.split({ type: "chars" });
 
-        gsap.set(splitTextLine, { perspective: 300 });
+    tl.from(textSplitChars.chars, {
+      duration: .4,
+      opacity: 0,
+      scale: 0,
+      y: 80,
+      rotationX: 100,
+      transformOrigin: "0% 50% -50",
+      ease: "back",
+      stagger: .1
+    });
+  });
+}
 
-        itemSplitted.split({ type: "chars, words" });
-
-        tl.from(itemSplitted.chars, {
-          duration: 1,
-          delay: .5,
-          x: 100,
-          autoAlpha: 0,
-          stagger: .05
-        });
-      });
-    }
-
-  }
-
+    });document.addEventListener("DOMContentLoaded", function () {
       if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
           gsap.registerPlugin(ScrollTrigger);
 
@@ -438,18 +320,7 @@ $(document).ready(function () {
     }
   }
 
-  // ScrollSmoother - Desktop Only
-if (
-  window.matchMedia("(min-width: 768px)").matches &&
-  $('#smooth-wrapper').length &&
-  $('#smooth-content').length &&
-  typeof ScrollSmoother !== "undefined"
-) {
-  ScrollSmoother.create({
-    smooth: 1.35,
-    effects: true
-  });
-}
+  // ScrollSmoother - using agntix-html approach
   if($('#smooth-wrapper').length && $('#smooth-content').length){
     ScrollSmoother.create({
       smooth: 1.35,
