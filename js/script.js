@@ -1423,22 +1423,51 @@ if (
 		});
 	}
 
-	document.querySelectorAll(".scroll-text").forEach((section) => {
-		let tl = gsap.timeline({
-			scrollTrigger: {
-			trigger: section,
-			start: "top 100%",
-			end: "bottom top",
-			scrub: 1,
-			markers: false,
-			},
-		});
-		tl.from(section.querySelector(".text1"), { xPercent: 20 })
-		.from(section.querySelector(".text2"), { xPercent: -20 }, 0);
-		tl.from(section.querySelector(".scroll-anim-top"), { yPercent: 10 }, 0)
-		.from(section.querySelector(".scroll-anim-bottom"), { yPercent: -10 }, 0);
-	});
+// Scroll Text Animation
+// Dinonaktifkan khusus Home versi HP
 
+const isHomeMobile =
+  document.querySelector(".banner-section") &&
+  window.matchMedia("(max-width: 767px)").matches;
+
+if (!isHomeMobile) {
+
+  document.querySelectorAll(".scroll-text").forEach((section) => {
+
+    const text1 = section.querySelector(".text1");
+    const text2 = section.querySelector(".text2");
+    const animTop = section.querySelector(".scroll-anim-top");
+    const animBottom = section.querySelector(".scroll-anim-bottom");
+
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: section,
+        start: "top 100%",
+        end: "bottom top",
+        scrub: 1,
+        markers: false
+      }
+    });
+
+    if (text1) {
+      tl.from(text1, { xPercent: 20 });
+    }
+
+    if (text2) {
+      tl.from(text2, { xPercent: -20 }, 0);
+    }
+
+    if (animTop) {
+      tl.from(animTop, { yPercent: 10 }, 0);
+    }
+
+    if (animBottom) {
+      tl.from(animBottom, { yPercent: -10 }, 0);
+    }
+
+  });
+
+}
 	//Bg Parallax
 	if($('.bg-parallax').length){
 		gsap.to(".bg-parallax", {
