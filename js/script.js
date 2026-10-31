@@ -107,53 +107,71 @@ $(document).ready(function () {
 
   // Text Invert
   function initTextReveall() {
-    const tagetedElementContainer =
-      document.querySelectorAll(".text-reveal-anim");
-    if (tagetedElementContainer?.length) {
-      tagetedElementContainer.forEach(e => {
-        var t = new SplitType(e, {
-          types: "chars",
-        });
-        gsap.from(t.chars, {
-          scrollTrigger: {
-            trigger: e,
-            start: "top 75%",
-            end: "top 25%",
-            scrub: !0,
-            duration: 0.5
-          },
-          color: "var(--theme-color1)",
-          stagger: 5,
-          ease: "back.out",
-        });
-      });
-    }
+
+  // Home HP: jangan jalankan SplitType
+  if (
+    document.querySelector(".banner-section") &&
+    window.matchMedia("(max-width: 767px)").matches
+  ) {
+    return;
   }
+
+  const tagetedElementContainer =
+    document.querySelectorAll(".text-reveal-anim");
+
+  if (tagetedElementContainer?.length) {
+    tagetedElementContainer.forEach(e => {
+      var t = new SplitType(e, { types: "chars" });
+
+      gsap.from(t.chars, {
+        scrollTrigger: {
+          trigger: e,
+          start: "top 75%",
+          end: "top 25%",
+          scrub: true,
+          duration: 0.5
+        },
+        color: "var(--theme-color1)",
+        stagger: 5,
+        ease: "back.out"
+      });
+    });
+  }
+}
   initTextReveall();
   function initTextReveal() {
-    const tagetedElementContainer =
-      document.querySelectorAll(".text-reveal-anim2");
-    if (tagetedElementContainer?.length) {
-      tagetedElementContainer.forEach(e => {
-        var t = new SplitType(e, {
-          types: "chars",
-        });
-        gsap.from(t.chars, {
-          scrollTrigger: {
-            trigger: e,
-            start: "top 75%",
-            end: "top 25%",
-            scrub: !0,
-            duration: 0.5
-          },
-          color: "#FFFFFF99",
-          letterSpacing: "-0.01em",
-          stagger: 0.05,
-          ease: "back.out",
-        });
-      });
-    }
+
+  // Home HP: jangan jalankan SplitType
+  if (
+    document.querySelector(".banner-section") &&
+    window.matchMedia("(max-width: 767px)").matches
+  ) {
+    return;
   }
+
+  const tagetedElementContainer =
+    document.querySelectorAll(".text-reveal-anim2");
+
+  if (tagetedElementContainer?.length) {
+    tagetedElementContainer.forEach(e => {
+      var t = new SplitType(e, { types: "chars" });
+
+      gsap.from(t.chars, {
+        scrollTrigger: {
+          trigger: e,
+          start: "top 75%",
+          end: "top 25%",
+          scrub: true,
+          duration: 0.5
+        },
+        color: "#FFFFFF99",
+        letterSpacing: "-0.01em",
+        stagger: 0.05,
+        ease: "back.out"
+      });
+    });
+  }
+}
   initTextReveal();
 
     // Words Animation
