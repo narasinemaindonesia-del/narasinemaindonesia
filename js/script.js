@@ -291,15 +291,18 @@ $(document).ready(function () {
     }
   }
 
-  // ScrollSmoother - using agntix-html approach
-  if($('#smooth-wrapper').length && $('#smooth-content').length){
-    ScrollSmoother.create({
-      smooth: 1.35,
-      effects: true,
-      smoothTouch: .1,
-      ignoreMobileResize: true
-    })
-  }
+// ScrollSmoother - Desktop Only
+if (
+  $('#smooth-wrapper').length &&
+  $('#smooth-content').length &&
+  window.matchMedia("(min-width: 768px)").matches
+) {
+  ScrollSmoother.create({
+    smooth: 1.35,
+    effects: true,
+    ignoreMobileResize: true
+  });
+}
 
 	//Submenu Dropdown Toggle
 	if($('.main-header li.dropdown ul').length){
